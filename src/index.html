@@ -1,11 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inżynierka</title>
+    <title>Praca Inżynierska</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <h1></h1>
+  <body class="container">
+    <header class="header">
+      <h1 class="header__title">Szukasz pokoju?</h1>
+      <p class="header__description">
+        Wystarczy że klikniesz szukaj i przeniesie Cię do wyszukiwarki pokojów
+      </p>
+      <button class="header__search">Szukaj</button>
+      <div class="header__arrowDown">
+        <i class="fas fa-angle-double-down header__icon"></i>
+      </div>
+    </header>
+    <div class="burger"><i class="fas fa-bars"></i></div>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="nagivation__item">
+          <a href="#" class="navigation__link"></a>
+        </li>
+        <li class="nagivation__item">
+          <a href="#" class="navigation__link"></a>
+        </li>
+        <li class="nagivation__item">
+          <a href="#" class="navigation__link"></a>
+        </li>
+        <li class="nagivation__item">
+          <a href="#" class="navigation__link"></a>
+        </li>
+      </ul>
+    </nav>
+    <main class="mainInfo">
+      <form class="mainInfo__filters">
+        <label class="mainInfo__label">Miejscowosć</label>
+        <input type="text" />
+        <label class="mainInfo__label">Cena od</label>
+        <input type="number" />
+        <label class="mainInfo__label">Cena do</label>
+        <input type="number" />
+        <input type="submit" value="szukaj" />
+      </form>
+      <div class="mainInfo__lastFive">
+        <div class="mainInfo__roomItem">
+          <img
+            src="./assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfoImagesRoom"
+          />
+          <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+          <p class="mainInfo__price">1000zł / miesiąc</p>
+          <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+        </div>
+        <div class="mainInfo__roomItem">
+          <img
+            src="./assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfoImagesRoom"
+          />
+          <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+          <p class="mainInfo__price">1000zł / miesiąc</p>
+          <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+        </div>
+        <div class="mainInfo__roomItem">
+          <img
+            src="./assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfoImagesRoom"
+          />
+          <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+          <p class="mainInfo__price">1000zł / miesiąc</p>
+          <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+        </div>
+        <div class="mainInfo__roomItem">
+          <img
+            src="./assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfoImagesRoom"
+          />
+          <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+          <p class="mainInfo__price">1000zł / miesiąc</p>
+          <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+        </div>
+      </div>
+      <h2 class="mainInfo__title">
+        Dlaczego u nas najbardziej opłaca się wyszukiwać pokój?
+      </h2>
+      <div class="mainInfo__whyUs">
+        <div class="mainInfo__reason">
+          <img
+            src="./assets/email.png"
+            alt="obrazek latających kopert nad mapą świata"
+            class="mainInfo__Image"
+          />
+          <h2 class="mainInfo__titleItem">Łatwy kontakt z użytkownikami</h2>
+          <p class="mainInfo__describtion">
+            Dzięki możliwości zgłoszenia usterki wszyscy użytkownicy będą
+            wiedzieć co to za usterka i jaki jest jej status. W dodatku
+            właściciel nie będzie musiał dzwonić do Ciebie czy usterka
+            naprawiona, wystarczy że sprawdzi status usterki
+          </p>
+        </div>
+        <div class="mainInfo__reason">
+          <img
+            src="./assets/email.png"
+            alt="obrazek latających kopert nad mapą świata"
+            class="mainInfo__Image"
+          />
+          <h2 class="mainInfo__titleItem">Łatwy kontakt z użytkownikami</h2>
+          <p class="mainInfo__describtion">
+            Dzięki możliwości zgłoszenia usterki wszyscy użytkownicy będą
+            wiedzieć co to za usterka i jaki jest jej status. W dodatku
+            właściciel nie będzie musiał dzwonić do Ciebie czy usterka
+            naprawiona, wystarczy że sprawdzi status usterki
+          </p>
+        </div>
+        <div class="mainInfo__reason">
+          <img
+            src="./assets/gear.png"
+            alt="dwa koła zębate  "
+            class="mainInfo__Image"
+          />
+          <h2 class="mainInfo__titleItem">Zgłaszanie usterki w aplikacji</h2>
+          <p class="mainInfo__describtion">
+            Dzięki możliwości zgłoszenia usterki wszyscy użytkownicy będą
+            wiedzieć co to za usterka i jaki jest jej status. W dodatku
+            właściciel nie będzie musiał dzwonić do Ciebie czy usterka
+            naprawiona, wystarczy że sprawdzi status usterki
+          </p>
+        </div>
+        <div class="mainInfo__reason">
+          <img
+            src="./assets/business.png"
+            alt="uścisk dłonie "
+            class="mainInfo__Image"
+          />
+          <h2 class="mainInfo__titleItem">Łatwy dostęp do umów</h2>
+          <p class="mainInfo__describtion">
+            Z nami możesz w każdej chwili przeglądać wszystkie umowy jakie
+            zawarłeś z właścicielem. Również możesz je pobrać do siebie w każdej
+            chwili
+          </p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
