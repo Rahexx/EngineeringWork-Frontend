@@ -1,1 +1,6 @@
-@import 'layout/indexPage.scss';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'layouts/burger';
+@import 'layouts/header';
+@import 'pages/indexPage.scss';

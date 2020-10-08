@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+  background-image: url('../assets/bed.jpg');
+  background-position: center 20%;
+  background-size: cover;
+  &__title {
+    position: absolute;
+    top: 18vh;
+    left: 5vw;
+    font-size: 32px;
+    color: $alice-blue;
+  }
+  &__description {
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+    width: 75vw;
+    font-size: 24px;
+    color: $alice-blue;
+  }
+  &__search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 5vh;
+    width: 33vw;
+    padding: 8px;
+    transform: translate(-50%);
+    border: 0;
+    background-color: $dark-blue;
+    color: $alice-blue;
+    text-transform: uppercase;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+  }
+  &__icon {
+    position: absolute;
+    top: 75%;
+    left: 48%;
+    font-size: 60px;
+    color: $dark-blue;
+    animation: upDown 2s linear infinite;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

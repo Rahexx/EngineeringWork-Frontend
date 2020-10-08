@@ -1,0 +1,17 @@
+.burger {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $alice-blue;
+  z-index: 2;
+
+  i {
+    color: $dark-blue;
+    font-size: 25px;
+  }
+}
