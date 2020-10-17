@@ -8,7 +8,7 @@
     top: 18vh;
     left: 5vw;
     font-size: 32px;
-    color: $alice-blue;
+    color: $allice-blue;
   }
   &__description {
     position: absolute;
@@ -16,19 +16,19 @@
     left: 5vw;
     width: 75vw;
     font-size: 24px;
-    color: $alice-blue;
+    color: $allice-blue;
   }
   &__search {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     height: 5vh;
     width: 33vw;
     padding: 8px;
     transform: translate(-50%);
     border: 0;
-    background-color: $dark-blue;
-    color: $alice-blue;
+    background-color: $blue-sapphire;
+    color: $allice-blue;
     text-transform: uppercase;
     border-radius: 8px;
     outline: none;
@@ -37,9 +37,9 @@
   &__icon {
     position: absolute;
     top: 75%;
-    left: 48%;
+    left: 45%;
     font-size: 60px;
-    color: $dark-blue;
+    color: $blue-sapphire;
     animation: upDown 2s linear infinite;
   }
 }
