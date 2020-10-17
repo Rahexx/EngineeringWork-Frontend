@@ -1,0 +1,33 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 100vw;
+  padding: 10vh 0 10vh 10vw;
+  background-color: #225d81;
+  z-index: 1;
+  &__list {
+    margin-top: 15%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @include mq(small) {
+      height: 85%;
+    }
+  }
+  &__item {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+  &__link {
+    color: #ebf7ff;
+    text-transform: uppercase;
+    text-decoration: none;
+    &--active {
+      color: #62b6cb;
+    }
+  }
+}
