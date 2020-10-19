@@ -29,5 +29,16 @@
     &--active {
       color: #62b6cb;
     }
+    &--logIn {
+      display: inline-block;
+      height: 30px;
+      width: 120px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 30px;
+      color: $blue-sapphire;
+      background-color: $allice-blue;
+      border-radius: 10px;
+    }
   }
 }
