@@ -10,8 +10,12 @@
     height: 80px;
     width: 100vw;
     display: inline-block;
+    font-size: 17px;
     line-height: 80px;
     text-align: center;
+    @include mq(extra-small) {
+      font-size: 20px;
+    }
   }
   &__lastFive {
     height: 220vh;
@@ -29,6 +33,7 @@
   }
   &__roomTitle {
     @include titleItem;
+    font-size: 18px;
   }
   &__price {
     padding-left: 10px;
@@ -49,7 +54,7 @@
   }
 
   &__whyUs {
-    height: calc(210vh + 80px);
+    height: calc(230vh + 80px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
