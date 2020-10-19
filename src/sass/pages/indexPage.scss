@@ -5,6 +5,74 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-img {
-  width: 100%;
+.mainInfo {
+  &__title {
+    height: 80px;
+    width: 100vw;
+    display: inline-block;
+    line-height: 80px;
+    text-align: center;
+  }
+  &__lastFive {
+    height: 220vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__roomItem {
+    margin: 0 auto;
+    width: 90vw;
+    background-color: $item-backGround;
+  }
+  &__ImagesRoom {
+    @include imageItem;
+  }
+  &__roomTitle {
+    @include titleItem;
+  }
+  &__price {
+    padding-left: 10px;
+    height: 40px;
+    width: 50%;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 40px;
+  }
+  &__location {
+    padding-right: 10px;
+    height: 40px;
+    width: 50%;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: end;
+  }
+
+  &__whyUs {
+    height: calc(210vh + 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__reason {
+    margin: 0 auto;
+    width: 90vw;
+    background-color: $item-backGround;
+  }
+
+  &__reasonImage {
+    @include imageItem;
+  }
+
+  &__titleItem {
+    @include titleItem;
+    font-size: 20px;
+  }
+
+  &__description {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+  }
 }
