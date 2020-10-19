@@ -5,6 +5,20 @@ const burger = document.querySelector('.burger');
 const icon = document.querySelector('.fa-bars');
 const nav = document.querySelector('.navigation');
 
+const showReason = () => {
+  const windowHeight = window.innerHeight;
+  const element = [...document.querySelectorAll('.mainInfo__reason')];
+  const offsetTopElement = element.map((item) => {
+    return item.offsetTop;
+  });
+
+  for(let i=0; i< element.length; i++){
+      if(window.pageYOffset > offsetTopElement[i] - (windowHeight / 1.2)){
+      gsap.to(element[i], { x: 0, duration: .75 });
+      }
+  }
+}
+
 const openNav = (width) => {
   icon.classList.remove('fa-bars');
   icon.classList.add('fa-times');
@@ -29,3 +43,5 @@ burger.addEventListener('click', () => {
   }
   openNav(pageWidth);
 });
+
+window.addEventListener('scroll', showReason);

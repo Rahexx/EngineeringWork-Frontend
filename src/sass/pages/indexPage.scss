@@ -6,6 +6,7 @@
 }
 
 .mainInfo {
+  overflow: hidden;
   &__title {
     height: 80px;
     width: 100vw;
@@ -64,6 +65,7 @@
     margin: 0 auto;
     width: 90vw;
     background-color: $item-backGround;
+    transform: translateX(100vw);
   }
 
   &__reasonImage {
