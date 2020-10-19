@@ -23,3 +23,20 @@ $breakpoints: (
     @error '"#{$breakpoint}" - Nie rozpoznaje tej wielkości';
   }
 }
+
+@mixin imageItem() {
+  margin: 30px 10%;
+  height: 25vh;
+  width: 80%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+@mixin titleItem() {
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+}
