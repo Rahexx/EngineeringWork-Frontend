@@ -3,12 +3,18 @@
   background-image: url('../assets/bed.jpg');
   background-position: center 20%;
   background-size: cover;
+  @include mq(large) {
+    background-position: center 60%;
+  }
   &__title {
     position: absolute;
     top: 18vh;
     left: 5vw;
     font-size: 32px;
     color: $allice-blue;
+    @include mq(large) {
+      font-size: 38px;
+    }
   }
   &__description {
     position: absolute;
@@ -19,6 +25,11 @@
     color: $allice-blue;
     @include mq(small) {
       top: 40vh;
+    }
+    @include mq(large) {
+      top: 30vh;
+      width: 40vw;
+      font-size: 24px;
     }
   }
   &__icon {

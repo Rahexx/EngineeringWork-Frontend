@@ -14,4 +14,7 @@
     color: #225d81;
     font-size: 25px;
   }
+  @include mq(large) {
+    display: none;
+  }
 }

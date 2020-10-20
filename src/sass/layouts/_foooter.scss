@@ -5,4 +5,7 @@
   @include mq(small) {
     line-height: 20vh;
   }
+  @include mq(large) {
+    line-height: 10vh;
+  }
 }
