@@ -19,6 +19,15 @@ module.exports = merge(common, {
         removeComments: true,
       },
     }),
+    new HtmlWebpackPlugin({
+      filename: 'logIn.html',
+      template: './src/pages/logIn.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+    }),
   ],
   module: {
     rules: [

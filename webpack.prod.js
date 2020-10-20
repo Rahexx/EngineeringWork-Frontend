@@ -30,6 +30,15 @@ module.exports = merge(common, {
           removeComments: true,
         },
       }),
+      new HtmlWebpackPlugin({
+        filename: 'logIn.html',
+        template: './src/pages/logIn.html',
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true,
+        },
+      }),
     ],
   },
   module: {
@@ -37,9 +46,9 @@ module.exports = merge(common, {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, //3. Extract css into files
-          'css-loader', //2. Turns css into commonjs
-          'sass-loader', //1. Turns sass into css
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
         ],
       },
       {
