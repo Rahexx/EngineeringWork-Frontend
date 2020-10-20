@@ -37,22 +37,18 @@
     border-radius: 8px;
     @include mq(small) {
       height: 75vh;
+      width: 90vw;
       display: flex;
     }
   }
   &__ImagesRoom {
     @include imageItem;
-    @include mq(small) {
-      margin: auto 10px;
-      width: 50%;
-      height: 90%;
-    }
   }
   &__textHolder {
     @include mq(small) {
       width: 50%;
       display: flex;
-      align-content: space-between;
+      align-content: space-evenly;
       flex-wrap: wrap;
     }
   }
@@ -115,6 +111,11 @@
     background-color: $item-backGround;
     border-radius: 8px;
     transform: translateX(100vw);
+    @include mq(small) {
+      height: 75vh;
+      width: 95vw;
+      display: flex;
+    }
   }
 
   &__reasonImage {
@@ -124,6 +125,9 @@
   &__titleItem {
     @include titleItem;
     font-size: 20px;
+    @include mq(small) {
+      font-size: 18px;
+    }
   }
 
   &__description {

@@ -3,7 +3,7 @@ $breakpoints: (
     min-width: 375px,
   ),
   small: (
-    min-width: 640px,
+    min-width: 568px,
   ),
   medium: (
     min-width: 768px,
@@ -33,6 +33,11 @@ $breakpoints: (
   width: 80%;
   display: inline-block;
   object-fit: cover;
+  @include mq(small) {
+    margin: auto 10px;
+    width: 50%;
+    height: 90%;
+  }
 }
 
 @mixin titleItem() {
