@@ -17,22 +17,9 @@
     width: 80vw;
     font-size: 20px;
     color: $allice-blue;
-  }
-  &__search {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    height: 5vh;
-    width: 33vw;
-    padding: 8px;
-    transform: translate(-50%);
-    border: 0;
-    background-color: $blue-sapphire;
-    color: $allice-blue;
-    text-transform: uppercase;
-    border-radius: 8px;
-    outline: none;
-    transition: 0.3s;
+    @include mq(small) {
+      top: 40vh;
+    }
   }
   &__icon {
     position: absolute;
@@ -41,6 +28,9 @@
     font-size: 60px;
     color: $blue-sapphire;
     animation: upDown 2s linear infinite;
+    @include mq(small) {
+      left: 50%;
+    }
   }
 }
 

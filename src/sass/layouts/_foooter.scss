@@ -2,4 +2,7 @@
   text-align: center;
   line-height: 10vh;
   background-color: $maximum-blue;
+  @include mq(small) {
+    line-height: 20vh;
+  }
 }
