@@ -6,8 +6,8 @@
   @include mq(small) {
     grid-template: 100vh 1fr 20vh / 100vw;
   }
-  @include mq(small) {
-    grid-template: 80vh 1fr 10vh / 100vw;
+  @include mq(large) {
+    grid-template: 80vh 1fr 10vh / 100%;
   }
 }
 

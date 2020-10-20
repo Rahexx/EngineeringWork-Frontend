@@ -2,11 +2,20 @@
   position: fixed;
   top: 0;
   left: -100vw;
+  padding: 10vh 0 10vh 10vw;
   height: 100vh;
   width: 100vw;
-  padding: 10vh 0 10vh 10vw;
   background-color: #225d81;
   z-index: 1;
+  @include mq(large) {
+    position: absolute;
+    top: 5vh;
+    left: 50vw;
+    padding: 10px 15px;
+    height: 10vh;
+    width: 45vw;
+    background-color: transparent;
+  }
   &__list {
     margin-top: 15%;
     height: 30%;
@@ -17,18 +26,38 @@
       margin-top: 0;
       height: 85%;
     }
+    @include mq(small) {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
   &__item {
     display: inline-block;
     height: 100%;
     width: 100%;
+    @include mq(large) {
+      height: 30px;
+    }
   }
   &__link {
     color: #ebf7ff;
     text-transform: uppercase;
     text-decoration: none;
+    @include mq(large) {
+      color: $allice-blue;
+      line-height: 30px;
+      transition: 0.5s;
+    }
+    &:hover {
+      color: #112e40;
+    }
     &--active {
       color: #62b6cb;
+      @include mq(large) {
+        color: #112e40;
+      }
     }
     &--logIn {
       display: inline-block;
@@ -40,6 +69,17 @@
       color: $blue-sapphire;
       background-color: $allice-blue;
       border-radius: 10px;
+      transition: 0.5s;
+      @include mq(large) {
+        padding: 10px 15px;
+        height: 35px;
+        width: 130px;
+        line-height: 15px;
+      }
+      &:hover {
+        background-color: #112e40;
+        color: $powder-blue;
+      }
     }
   }
 }
