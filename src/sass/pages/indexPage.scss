@@ -163,6 +163,9 @@
     @include mq(small) {
       font-size: 18px;
     }
+    @include mq(large) {
+      font-size: 22px;
+    }
   }
 
   &__description {
