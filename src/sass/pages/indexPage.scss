@@ -23,6 +23,10 @@
     @include mq(extra-small) {
       font-size: 20px;
     }
+    @include mq(large) {
+      margin-top: 75px;
+      font-size: 26px;
+    }
   }
   &__lastFive {
     height: 320vh;
@@ -31,6 +35,9 @@
     justify-content: space-evenly;
     @include mq(small) {
       height: 400vh;
+    }
+    @include mq(large) {
+      height: 200vh;
     }
   }
   &__roomItem {
@@ -42,6 +49,10 @@
       height: 75vh;
       width: 90vw;
       display: flex;
+    }
+    @include mq(large) {
+      height: 40vh;
+      width: 75vw;
     }
   }
   &__ImagesRoom {
@@ -62,6 +73,10 @@
       margin-top: 10vh;
       width: 100%;
     }
+    @include mq(large) {
+      margin-top: 0;
+      font-size: 22px;
+    }
   }
   &__roomDescritpion {
     margin: 0 auto;
@@ -71,6 +86,10 @@
     text-align: center;
     @include mq(small) {
       padding: 0;
+    }
+    @include mq(large) {
+      padding-top: 15px;
+      width: 75%;
     }
   }
   &__price {
@@ -84,6 +103,9 @@
       margin-bottom: 20px;
       width: 40%;
     }
+    @include mq(large) {
+      font-size: 16px;
+    }
   }
   &__location {
     padding-right: 10px;
@@ -96,6 +118,9 @@
     @include mq(small) {
       width: 60%;
     }
+    @include mq(large) {
+      font-size: 16px;
+    }
   }
 
   &__whyUs {
@@ -105,6 +130,9 @@
     justify-content: space-evenly;
     @include mq(small) {
       height: calc(300vh + 80px);
+    }
+    @include mq(large) {
+      height: 200vh;
     }
   }
 
@@ -118,6 +146,10 @@
       height: 75vh;
       width: 95vw;
       display: flex;
+    }
+    @include mq(large) {
+      height: 50vh;
+      width: 50vw;
     }
   }
 
