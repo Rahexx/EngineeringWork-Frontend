@@ -10,11 +10,26 @@
   @include mq(large) {
     position: absolute;
     top: 5vh;
-    left: 50vw;
+    left: 0;
     padding: 10px 15px;
     height: 10vh;
-    width: 45vw;
+    width: 100vw;
     background-color: transparent;
+  }
+  @include mq(extra-large) {
+    left: 50vw;
+    width: 45vw;
+  }
+  &--fixed {
+    @include mq(large) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px 30px;
+      height: 10vh;
+      width: 100vw;
+      background-color: #225d81;
+    }
   }
   &__list {
     margin-top: 15%;
@@ -26,7 +41,7 @@
       margin-top: 0;
       height: 85%;
     }
-    @include mq(small) {
+    @include mq(large) {
       height: 100%;
       display: flex;
       flex-direction: row;
