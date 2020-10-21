@@ -5,7 +5,7 @@
   padding: 10vh 0 10vh 10vw;
   height: 100vh;
   width: 100vw;
-  background-color: #225d81;
+  background-color: $blue-sapphire;
   z-index: 1;
   @include mq(large) {
     position: absolute;
@@ -28,7 +28,7 @@
       padding: 20px 30px;
       height: 10vh;
       width: 100vw;
-      background-color: #225d81;
+      background-color: $blue-sapphire;
     }
   }
   &__list {
@@ -57,7 +57,7 @@
     }
   }
   &__link {
-    color: #ebf7ff;
+    color: $allice-blue;
     text-transform: uppercase;
     text-decoration: none;
     @include mq(large) {
@@ -66,12 +66,12 @@
       transition: 0.5s;
     }
     &:hover {
-      color: #112e40;
+      color: $prussian-blue;
     }
     &--active {
-      color: #62b6cb;
+      color: $maximum-blue;
       @include mq(large) {
-        color: #112e40;
+        color: $prussian-blue;
       }
     }
     &--logIn {
@@ -92,7 +92,7 @@
         line-height: 15px;
       }
       &:hover {
-        background-color: #112e40;
+        background-color: $prussian-blue;
         color: $powder-blue;
       }
     }

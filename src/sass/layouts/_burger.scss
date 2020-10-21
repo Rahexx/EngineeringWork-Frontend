@@ -7,11 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ebf7ff;
+  background-color: $allice-blue;
   z-index: 2;
 
   i {
-    color: #225d81;
+    color: $blue-sapphire;
     font-size: 25px;
   }
   @include mq(large) {

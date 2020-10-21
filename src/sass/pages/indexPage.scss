@@ -3,6 +3,7 @@
   grid-template: 100vh 1fr 10vh / 100vw;
   min-height: 200vh;
   font-family: 'Open Sans', sans-serif;
+  background-color: $background-collor;
   @include mq(small) {
     grid-template: 100vh 1fr 20vh / 100vw;
   }
