@@ -19,10 +19,16 @@
     <main class="logHolder">
         <h1 class="logHolder__title">Logowanie</h1>
         <form class="logHolder__form">
-            <label class="logHolder__label" for="login">Login</label>
-            <input class="logHolder__input" type="text" placeholder="Login">
-            <label class="logHolder__label" for="password">Hasło</label>
-            <input class="logHolder__input" type="password" placeholder="Hasło">
+            <div class="logHolder__field">
+              <input class="logHolder__input" type="text" required>
+              <label class="logHolder__label" for="login">Login</label>
+              <span class="logHolder__line"></span>
+            </div>
+            <div class="logHolder__field">
+              <input class="logHolder__input" type="password" required>
+              <label class="logHolder__label" for="password">Hasło</label>
+              <span class="logHolder__line"></span>
+            </div>
             <input class="logHolder__submit" type="submit" value="Zaloguj się">
         </form>
         <p class="logHolder__text">Nie masz konta? <a class="logHolder__link" href="#">Zarejestruj się</a></p>

@@ -1,0 +1,99 @@
+.logContainer {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background-collor;
+}
+
+.logHolder {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: 20vh 50vh 10vh 20vh / 100vw;
+  &__title {
+    align-self: end;
+    justify-self: center;
+    font-size: 30px;
+  }
+  &__form {
+    margin: 0 auto;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  &__field {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid $form-grey;
+  }
+  &__input {
+    width: 100%;
+    padding: 0 5px;
+    border: none;
+    height: 40px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+  }
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: $form-grey;
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  &__line {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color: $maximum-blue;
+      transition: 0.5s;
+    }
+  }
+  &__submit {
+    margin: 30px auto 0;
+    border: 1px solid;
+    height: 50px;
+    width: 75%;
+    background-color: $maximum-blue;
+    border-radius: 25px;
+    font-size: 18px;
+    color: $allice-blue;
+    font-weight: 700;
+    outline: none;
+    @include mq(large) {
+      &:hover {
+        border-color: $maximum-blue;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+    }
+  }
+  &__text {
+    margin-top: 30px;
+    text-align: center;
+    color: $form-grey;
+  }
+  &__link {
+    color: $maximum-blue;
+    text-decoration: none;
+  }
+}
+
+.logHolder__input:focus ~ .logHolder__label,
+.logHolder__input:valid ~ .logHolder__label {
+  top: -5px;
+  color: $carolina-blue;
+}
+
+.logHolder__input:focus ~ .logHolder__line::before,
+.logHolder__input:valid ~ .logHolder__line::before {
+  width: 100%;
+}
