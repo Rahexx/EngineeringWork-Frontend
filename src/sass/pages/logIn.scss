@@ -9,10 +9,27 @@
   width: 100vw;
   display: grid;
   grid-template: 20vh 50vh 10vh 20vh / 100vw;
+  @include mq(small) {
+    grid-template: 30vh 75vh 30vh / 100vw;
+  }
+  @include mq(large) {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    height: 75vh;
+    width: 50vw;
+    grid-template: 20vh 35vh 20vh / 100%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+  }
   &__title {
     align-self: end;
     justify-self: center;
     font-size: 30px;
+    @include mq(small) {
+      align-self: center;
+    }
   }
   &__form {
     margin: 0 auto;
@@ -20,6 +37,12 @@
     display: flex;
     flex-direction: column;
     align-self: center;
+    @include mq(small) {
+      width: 50vw;
+    }
+    @include mq(large) {
+      width: 50%;
+    }
   }
   &__field {
     position: relative;
@@ -80,10 +103,22 @@
     margin-top: 30px;
     text-align: center;
     color: $form-grey;
+    @include mq(small) {
+      margin-top: 15vh;
+    }
+    @include mq(large) {
+      margin-top: 80px;
+    }
   }
   &__link {
     color: $maximum-blue;
     text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+      @include mq(large) {
+        color: $prussian-blue;
+      }
+    }
   }
 }
 
