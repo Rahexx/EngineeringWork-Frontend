@@ -29,6 +29,7 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true,
         },
+        chunks: ['main'],
       }),
       new HtmlWebpackPlugin({
         filename: 'logIn.html',
@@ -38,6 +39,7 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true,
         },
+        chunks: ['logIn'],
       }),
     ],
   },

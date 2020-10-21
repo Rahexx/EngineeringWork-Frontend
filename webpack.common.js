@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     main: './src/index.js',
+    logIn: './src/logIn.js',
   },
   module: {
     rules: [
