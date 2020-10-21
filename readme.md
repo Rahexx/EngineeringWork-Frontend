@@ -1,4 +1,4 @@
-# [Bazylika](https://github.com/Rahexx/Bazylika)
+# [Praca Inżynierska](https://github.com/Rahexx/EngineeringWork-Frontend)
 
 > This is frontend part my engineering work.
 
