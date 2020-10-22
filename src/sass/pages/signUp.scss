@@ -1,0 +1,161 @@
+.signContainer {
+  @include bodyForm();
+}
+
+.signHolder {
+  padding: 50px 15px 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  &__header {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 75px;
+  }
+  &__progressBar {
+    display: flex;
+    margin: 40px 0;
+  }
+  &__step {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  &__stepTitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 8px;
+  }
+  &__bullet {
+    position: relative;
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      right: -51px;
+      height: 3px;
+      width: 44px;
+      background-color: #262626;
+    }
+    &::after {
+      background-color: $maximum-blue;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: fill 0.5s linear forwards;
+    }
+  }
+  &__bulletContent {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  &__check {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  &__formOuter {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__form {
+    display: flex;
+    width: 400%;
+  }
+  &__page {
+    width: 25%;
+  }
+  &__title {
+    margin-bottom: 12vh;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  &__field {
+    position: relative;
+    margin: 20vw auto;
+    height: 5vh;
+    width: 75vw;
+    display: flex;
+    &--buttons button {
+      margin-top: -20px;
+    }
+  }
+  &__input {
+    padding-left: 15px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid $form-grey;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    &:focus {
+      border: 1px solid $maximum-blue;
+    }
+  }
+  &__select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  &__label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+  }
+  &__button {
+    margin-top: -20px;
+    border: none;
+    height: calc(100% + 5px);
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: $maximum-blue;
+    color: $allice-blue;
+    text-transform: uppercase;
+    @include mq(large) {
+      transition: 0.5s;
+      &:hover {
+        background-color: $prussian-blue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.previoutButton {
+  margin-right: 3px;
+  font-size: 17px;
+}
+
+.nextButton {
+  margin-left: 3px;
+  font-size: 17px;
+}
+
+.signHolder__step:last-child .signHolder__bullet::before,
+.signHolder__step:last-child .signHolder__bullet::after {
+  display: none;
+}
+
+@keyframes fill {
+  100% {
+    transform: scaleX(1);
+  }
+}

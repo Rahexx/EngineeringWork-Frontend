@@ -1,7 +1,5 @@
 .logContainer {
-  position: relative;
-  font-family: 'Open Sans', sans-serif;
-  background-color: $background-collor;
+  @include bodyForm();
 }
 
 .logHolder {
@@ -85,16 +83,18 @@
     border: 1px solid;
     height: 50px;
     width: 75%;
-    background-color: $maximum-blue;
     border-radius: 25px;
     font-size: 18px;
-    color: $allice-blue;
     font-weight: 700;
+    background-color: $maximum-blue;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $allice-blue;
     outline: none;
     @include mq(large) {
+      transition: 0.5s;
       &:hover {
         border-color: $maximum-blue;
-        transition: 0.5s;
         cursor: pointer;
       }
     }

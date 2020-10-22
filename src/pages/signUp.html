@@ -15,9 +15,39 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="logContainer">
+  <body class="signContainer">
     <main class="signHolder">
-        <h1>Formularz Rejestracji</h1>
+        <h1 class="signHolder__header">Formularz Rejestracji</h1>
+        <div class="signHolder__progressBar">
+          <div class="signHolder__step">
+            <p class="signHolder__stepTitle">Imię</p>
+            <div class="signHolder__bullet">
+              <span class="signHolder__bulletContent">1</span>
+            </div>
+            <div class="signHolder__check fas fa-check"></div>
+          </div>
+          <div class="signHolder__step">
+            <p class="signHolder__stepTitle">Kontakt</p>
+            <div class="signHolder__bullet">
+              <span class="signHolder__bulletContent">2</span>
+            </div>
+            <div class="signHolder__check fas fa-check"></div>
+          </div>
+          <div class="signHolder__step">
+            <p class="signHolder__stepTitle">Urodziny</p>
+            <div class="signHolder__bullet">
+              <span class="signHolder__bulletContent">3</span>
+            </div>
+            <div class="signHolder__check fas fa-check"></div>
+          </div>
+          <div class="signHolder__step">
+            <p class="signHolder__stepTitle">Akceptacja</p>
+            <div class="signHolder__bullet">
+              <span class="signHolder__bulletContent">4</span>
+            </div>
+            <div class="signHolder__check fas fa-check"></div>
+          </div>
+        </div>
         <div class="signHolder__formOuter">
           <form class="signHolder__form">
             <div class="signHolder__page">
@@ -48,7 +78,7 @@
                 <label class="signHolder__label" for="login">Numer telefonu</label>
                 <span class="signHolder__line"></span>
               </div>
-              <div class="signHolder__field">
+              <div class="signHolder__field signHolder__field--buttons">
                 <button class="signHolder__button previoutButton previoutButton--1">Poprzedni</button>
                 <button class="signHolder__button nextButton nextButton--1">Następny</button>
               </div>
@@ -87,7 +117,7 @@
               </div>
               <div class="signHolder__field">
                 <button class="signHolder__button previoutButton previoutButton--3">Poprzedni</button>
-                <input class="signHolder__submit" type="submit" value="Zarejestruj się">
+                <input class="signHolder__button" type="submit" value="Zarejestruj się">
               </div>
             </div>
           </form>
