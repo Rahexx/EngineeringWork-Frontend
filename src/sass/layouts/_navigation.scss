@@ -12,7 +12,7 @@
     top: 5vh;
     left: 0;
     padding: 10px 15px;
-    height: 10vh;
+    height: 75px;
     width: 100vw;
     background-color: transparent;
   }
@@ -26,7 +26,7 @@
       top: 0;
       left: 0;
       padding: 20px 30px;
-      height: 10vh;
+      height: 75px;
       width: 100vw;
       background-color: $blue-sapphire;
     }
@@ -52,9 +52,6 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    @include mq(large) {
-      // height: 35px;
-    }
   }
   &__link {
     color: $allice-blue;
@@ -64,7 +61,7 @@
       display: inline-block;
       height: 100%;
       color: $allice-blue;
-      line-height: 100%;
+      line-height: 35px;
       transition: 0.5s;
     }
     &:hover {

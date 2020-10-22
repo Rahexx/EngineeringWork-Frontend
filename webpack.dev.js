@@ -30,6 +30,16 @@ module.exports = merge(common, {
       },
       chunks: ['logIn'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'signUp.html',
+      template: './src/pages/signUp.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['signUp'],
+    }),
   ],
   module: {
     rules: [
