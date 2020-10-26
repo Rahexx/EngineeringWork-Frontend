@@ -19,6 +19,12 @@
       margin: 0 auto 50px;
       width: 90vw;
     }
+    @include mq(large) {
+      width: 50vw;
+    }
+    @include mq(extra-large) {
+      width: 33vw;
+    }
   }
   &__step {
     position: relative;
@@ -58,6 +64,14 @@
       @include mq(small) {
         right: -16vw;
         width: 14vw;
+      }
+      @include mq(large) {
+        right: -8.5vw;
+        width: 7vw;
+      }
+      @include mq(extra-large) {
+        left: 2.5vw;
+        width: 5vw;
       }
     }
     &--active::after {
@@ -112,6 +126,9 @@
     @include mq(small) {
       margin-bottom: 0;
     }
+    @include mq(extra-large) {
+      margin-bottom: 80px;
+    }
   }
   &__field {
     position: relative;
@@ -122,6 +139,13 @@
     @include mq(small) {
       margin: 19vh auto;
       padding: 0 15vw;
+    }
+    @include mq(large) {
+      margin: 8vh auto;
+    }
+    @include mq(extra-large) {
+      margin: 10vh auto;
+      padding: 0 25vw;
     }
     &--buttons button {
       margin-top: -20px;
@@ -139,6 +163,10 @@
       height: 140%;
       font-size: 14px;
     }
+    @include mq(large) {
+      height: 100%;
+      font-size: 18px;
+    }
     &:focus {
       border: 1px solid $maximum-blue;
     }
@@ -152,6 +180,10 @@
       height: 140%;
       font-size: 14px;
     }
+    @include mq(large) {
+      height: 100%;
+      font-size: 18px;
+    }
   }
   &__label {
     position: absolute;
@@ -162,7 +194,7 @@
     position: absolute;
     top: -50px;
     height: 30px;
-    display: none;
+    // display: none;
     font-size: 14px;
     color: $error;
   }
@@ -181,6 +213,9 @@
     outline: none;
     @include mq(small) {
       height: 190%;
+    }
+    @include mq(large) {
+      height: 100%;
     }
     @include mq(large) {
       transition: 0.5s;
