@@ -1,7 +1,7 @@
 const path = require('path');
-const common = require('./webpack.common');
 const merge = require('webpack-merge');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -39,6 +39,16 @@ module.exports = merge(common, {
         removeComments: true,
       },
       chunks: ['signUp'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'admin.html',
+      template: './src/pages/admin.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['main'],
     }),
   ],
   module: {
