@@ -6,39 +6,37 @@ const icon = document.querySelector('.fa-bars');
 const nav = document.querySelector('.navigation');
 
 const fixedNavigation = () => {
-  if(!nav.classList.contains('navigation--fixed')){
+  if (!nav.classList.contains('navigation--fixed')) {
     nav.classList.add('navigation--fixed');
   }
-}
+};
 
 const unFixedNavigation = () => {
-  if(nav.classList.contains('navigation--fixed')){
+  if (nav.classList.contains('navigation--fixed')) {
     nav.classList.remove('navigation--fixed');
   }
-}
+};
 
 const changeNavigation = () => {
-  if(window.pageYOffset > window.innerHeight / 2){
+  if (window.pageYOffset > window.innerHeight / 2) {
     fixedNavigation();
-  }else{
+  } else {
     unFixedNavigation();
   }
-}
+};
 
 const showReason = () => {
   const windowHeight = window.innerHeight;
   const scrollOffset = window.pageYOffset;
   const element = [...document.querySelectorAll('.mainInfo__reason')];
-  const offsetTopElement = element.map((item) => {
-    return item.offsetTop;
-  });
+  const offsetTopElement = element.map((item) => item.offsetTop);
 
-  for(let i=0; i< element.length; i++){
-      if(scrollOffset > offsetTopElement[i] - (windowHeight / 1.2)){
-      gsap.to(element[i], { x: 0, duration: .75 });
-      }
+  for (let i = 0; i < element.length; i++) {
+    if (scrollOffset > offsetTopElement[i] - (windowHeight / 1.2)) {
+      gsap.to(element[i], { x: 0, duration: 0.75 });
+    }
   }
-}
+};
 
 const openNav = (width) => {
   icon.classList.remove('fa-bars');
@@ -68,8 +66,7 @@ burger.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
   showReason();
 
-  if(window.innerWidth > 1024){
+  if (window.innerWidth > 1024) {
     changeNavigation();
   }
-
 });
