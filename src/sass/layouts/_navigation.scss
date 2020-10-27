@@ -6,7 +6,7 @@
   height: 100vh;
   width: 100vw;
   background-color: $blue-sapphire;
-  z-index: 1;
+  z-index: 3;
   @include mq(large) {
     position: absolute;
     top: 5vh;
