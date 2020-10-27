@@ -29,6 +29,11 @@
     border-radius: 50px;
     outline: none;
     z-index: 1;
+    @include mq(small) {
+      left: 50%;
+      width: 50vw;
+      transform: translate(-50%, -50%);
+    }
     &::placeholder {
       color: $allice-blue;
     }
@@ -48,6 +53,9 @@
     border-radius: 50%;
     z-index: 2;
     outline: none;
+    @include mq(small) {
+      left: 72%;
+    }
   }
   &__listItem {
     margin-bottom: 10vh;
@@ -57,10 +65,16 @@
     flex-wrap: wrap;
     background-color: $item-backGround;
     border-radius: 8px;
+    @include mq(small) {
+      height: 47vh;
+    }
   }
   &__info {
     width: 100%;
     font-weight: bold;
+    @include mq(small) {
+      width: 50%;
+    }
   }
   &__login,
   &__email,
@@ -78,6 +92,10 @@
     background-color: $allice-blue;
     text-transform: uppercase;
     border-radius: 3px;
+    @include mq(small) {
+      margin-top: 20px;
+      height: 10vh;
+    }
     &:nth-child(5),
     &:nth-child(6) {
       margin-right: 2vw;
