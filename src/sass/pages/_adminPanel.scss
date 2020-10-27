@@ -42,10 +42,45 @@
     width: 33px;
     transform: translate(-15%, -1px);
     font-size: 18px;
+    line-height: 33px;
     color: $maximum-blue;
     background-color: $allice-blue;
     border-radius: 50%;
     z-index: 2;
     outline: none;
+  }
+  &__listItem {
+    margin-bottom: 10vh;
+    padding: 20px 7vw;
+    height: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $item-backGround;
+    border-radius: 8px;
+  }
+  &__info {
+    width: 100%;
+    font-weight: bold;
+  }
+  &__login,
+  &__email,
+  &__name,
+  &__surname {
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &__button {
+    border: none;
+    width: 24vw;
+    font-size: 11px;
+    color: $blue-sapphire;
+    background-color: $allice-blue;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &:nth-child(5),
+    &:nth-child(6) {
+      margin-right: 2vw;
+    }
   }
 }
