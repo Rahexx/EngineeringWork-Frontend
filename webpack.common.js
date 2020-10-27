@@ -3,6 +3,7 @@ module.exports = {
     main: './src/index.js',
     logIn: './src/logIn.js',
     signUp: './src/signUp.js',
+    admin: './src/admin.js',
   },
   module: {
     rules: [
