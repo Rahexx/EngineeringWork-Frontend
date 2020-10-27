@@ -1,0 +1,51 @@
+.adminContainer {
+  min-height: 150vh;
+}
+
+.adminPanel {
+  padding: 5vh 5vw;
+  &__formTitle {
+    padding-bottom: 27px;
+    font-size: 22px;
+    text-align: center;
+  }
+  &__searchForm {
+    position: relative;
+    margin-bottom: 50px;
+    height: 40px;
+  }
+  &__searchInput {
+    position: absolute;
+    top: 50%;
+    left: 7.5vw;
+    padding: 0 15px;
+    border: none;
+    height: 40px;
+    width: 75vw;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: $allice-blue;
+    background-color: $carolina-blue;
+    border-radius: 50px;
+    outline: none;
+    z-index: 1;
+    &::placeholder {
+      color: $allice-blue;
+    }
+  }
+  &__search {
+    position: absolute;
+    border: none;
+    top: 4px;
+    left: 72.5vw;
+    height: 33px;
+    width: 33px;
+    transform: translate(-15%, -1px);
+    font-size: 18px;
+    color: $maximum-blue;
+    background-color: $allice-blue;
+    border-radius: 50%;
+    z-index: 2;
+    outline: none;
+  }
+}
