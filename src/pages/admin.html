@@ -166,17 +166,43 @@
             <button class="adminPanel__button adminPanel__button--delete">Usuń</button>
           </li>
         </ul>
-        <div class="detailsPopUp">
+        <div class="popUp popUp--details">
           <div class="burger burger--details"><i class="fas fa-times"></i></div>
-          <h2 class="detailsPopUp__title">Informacje o użytkowniku:</h2>
-          <p class="detailsPopUp__detailsInfo">Login: Rahexx</p>
-          <p class="detailsPopUp__detailsInfo">Imię: Andrzej</p>
-          <p class="detailsPopUp__detailsInfo">Hasło: P************</p>
-          <p class="detailsPopUp__detailsInfo">Nazwisko: Łuszcz</p>
-          <p class="detailsPopUp__detailsInfo">Email: andrzejLuszcz@gmail.com</p>
-          <p class="detailsPopUp__detailsInfo">Numer telefonu: 602356111</p>
-          <p class="detailsPopUp__detailsInfo">Data urodzenia: 11.02.1997r</p>
-          <p class="detailsPopUp__detailsInfo">płeć: Mężczyzna</p>
+          <h2 class="popUp__title">Informacje o użytkowniku:</h2>
+          <p class="popUp__detailsInfo">Login: Rahexx</p>
+          <p class="popUp__detailsInfo">Hasło: P************</p>
+          <p class="popUp__detailsInfo">Imię: Andrzej</p>
+          <p class="popUp__detailsInfo">Nazwisko: Łuszcz</p>
+          <p class="popUp__detailsInfo">Email: andrzejLuszcz@gmail.com</p>
+          <p class="popUp__detailsInfo">Numer telefonu: 602356111</p>
+          <p class="popUp__detailsInfo">Data urodzenia: 11.02.1997r</p>
+          <p class="popUp__detailsInfo">płeć: Mężczyzna</p>
+        </div>
+        <div class="popUp popUp--edit">
+          <div class="burger burger--edt"><i class="fas fa-times"></i></div>
+          <h2 class="popUp__title">Edycja użytkownika:</h2>
+          <form class="popUp__form">
+            <div class="signHolder__field signHolder__field--edit">
+              <input class="signHolder__input" type="text" value="Rahexx">
+              <label class="signHolder__label" >Login:</label>
+            </div>
+            <div class="signHolder__field signHolder__field--edit">
+              <input class="signHolder__input" type="text" value="Andrzej">
+              <label class="signHolder__label" >Imię:</label>
+            </div>
+            <div class="signHolder__field signHolder__field--edit">
+              <input class="signHolder__input" type="text" value="Łuszcz">
+              <label class="signHolder__label" >Nazwisko:</label>
+            </div>
+            <div class="signHolder__field signHolder__field--edit">
+              <input class="signHolder__input" type="text" value="andrzejLuszcz@gmail.com">
+              <label class="signHolder__label" >email:</label>
+            </div>
+            <div class="signHolder__field signHolder__field--edit">
+              <input class="signHolder__input" type="text" value="602356111">
+              <label class="signHolder__label">numer telefonu:</label>
+            </div>
+          </form>
         </div>
     </main>
     <footer class="footer">
