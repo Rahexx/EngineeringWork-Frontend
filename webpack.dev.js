@@ -50,6 +50,16 @@ module.exports = merge(common, {
       },
       chunks: ['main', 'admin'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'admin.html',
+      template: './src/pages/pages.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [
