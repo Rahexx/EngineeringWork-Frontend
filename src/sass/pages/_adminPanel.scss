@@ -141,6 +141,9 @@
     &:nth-child(6) {
       margin-right: 2vw;
     }
+    &:hover {
+      cursor: pointer;
+    }
     &--edit {
       color: $allice-blue;
       background-color: $edit;
@@ -151,5 +154,3 @@
     }
   }
 }
-
-

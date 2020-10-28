@@ -149,6 +149,14 @@
     }
     &--edit {
       margin: 15vw auto;
+      @include mq(small) {
+        margin: 10vh 0;
+        padding: 0 5vw;
+        width: 40vw;
+      }
+      @include mq(large) {
+        margin: 4vh 0 2vh;
+      }
     }
     &--buttons button {
       margin-top: -20px;
@@ -167,8 +175,8 @@
       font-size: 14px;
     }
     @include mq(large) {
-      height: 100%;
-      font-size: 18px;
+      height: 80%;
+      font-size: 16px;
     }
     &:focus {
       border: 1px solid $maximum-blue;
@@ -192,6 +200,9 @@
     position: absolute;
     top: -30px;
     font-weight: 500;
+    @include mq(extra-small) {
+      font-size: 18px;
+    }
   }
   &__error {
     position: absolute;

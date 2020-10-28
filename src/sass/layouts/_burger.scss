@@ -9,6 +9,7 @@
   align-items: center;
   background-color: $allice-blue;
   z-index: 4;
+  cursor: pointer;
   @include mq(large) {
     display: none;
   }

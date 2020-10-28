@@ -9,21 +9,54 @@
   color: $allice-blue;
   background-color: $maximum-blue;
   z-index: 4;
+  @include mq(large) {
+    top: 50%;
+    left: -50%;
+    height: 50vw;
+    width: 50vw;
+    transform: translate(-50%, -50%);
+  }
+  @include mq(large) {
+    height: 40vw;
+    width: 40vw;
+  }
   &--edit {
-    left: 0;
     padding: 10vh 7vw 2vh;
-    display: block;
     background-color: $edit;
+    @include mq(large) {
+      padding: 5vh 7vw 2vh;
+    }
   }
   &__title {
     margin-bottom: 7vh;
     font-size: 25px;
     text-align: center;
+    @include mq(extra-small) {
+      font-size: 32px;
+    }
+    @include mq(small) {
+      margin-bottom: 5vh;
+      font-size: 27px;
+    }
   }
   &__detailsInfo {
     margin: 2vh 0;
+    @include mq(extra-small) {
+      font-size: 22px;
+    }
+    @include mq(small) {
+      margin: 4vh 0;
+      font-size: 17px;
+    }
   }
   &__form {
     margin-top: 10vh;
+    @include mq(small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include mq(large) {
+      margin-top: 0;
+    }
   }
 }
