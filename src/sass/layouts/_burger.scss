@@ -9,12 +9,14 @@
   align-items: center;
   background-color: $allice-blue;
   z-index: 4;
-
+  @include mq(large) {
+    display: none;
+  }
+  &--details {
+    display: none;
+  }
   i {
     color: $blue-sapphire;
     font-size: 25px;
-  }
-  @include mq(large) {
-    display: none;
   }
 }
