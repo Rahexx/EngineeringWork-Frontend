@@ -67,18 +67,13 @@
     }
   }
   &__heart {
-    position: absolute;
     bottom: 5vh;
     left: 50%;
-    transform: translateX(-50%);
     font-size: 28px;
-    color: $error;
+    @include heart();
     @include mq(small) {
       left: 95%;
       bottom: 85%;
-    }
-    &:hover {
-      cursor: pointer;
     }
   }
 }

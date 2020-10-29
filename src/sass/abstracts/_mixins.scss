@@ -75,3 +75,12 @@ $breakpoints: (
   text-transform: uppercase;
   outline: none;
 }
+
+@mixin heart {
+  position: absolute;
+  transform: translateX(-50%);
+  color: $error;
+  &:hover {
+    cursor: pointer;
+  }
+}
