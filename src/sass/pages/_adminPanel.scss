@@ -5,12 +5,6 @@
 .adminPanel {
   padding: 5vh 5vw;
   &__formTitle {
-    padding-bottom: 27px;
-    font-size: 22px;
-    text-align: center;
-    @include mq(extra-large) {
-      padding-bottom: 62px;
-    }
   }
   &__searchForm {
     position: relative;
@@ -18,59 +12,10 @@
     height: 40px;
   }
   &__searchInput {
-    position: absolute;
-    top: 50%;
-    left: 7.5vw;
-    padding: 0 15px;
-    border: none;
-    height: 40px;
-    width: 75vw;
-    transform: translateY(-50%);
-    font-size: 17px;
-    color: $allice-blue;
-    background-color: $carolina-blue;
-    border-radius: 50px;
-    outline: none;
-    z-index: 1;
-    @include mq(small) {
-      left: 50%;
-      width: 50vw;
-      transform: translate(-50%, -50%);
-    }
-    @include mq(large) {
-      width: 30vw;
-    }
-    @include mq(extra-large) {
-      width: 20vw;
-    }
-    &::placeholder {
-      color: $allice-blue;
-    }
+    @include searchInput();
   }
   &__search {
-    position: absolute;
-    border: none;
-    top: 4px;
-    left: 72.5vw;
-    height: 33px;
-    width: 33px;
-    transform: translate(-15%, -1px);
-    font-size: 18px;
-    line-height: 33px;
-    color: $maximum-blue;
-    background-color: $allice-blue;
-    border-radius: 50%;
-    z-index: 2;
-    outline: none;
-    @include mq(small) {
-      left: 72%;
-    }
-    @include mq(large) {
-      left: 63%;
-    }
-    @include mq(extra-large) {
-      left: 58.5%;
-    }
+    @include searchIcon();
   }
   &__listItem {
     margin-bottom: 10vh;

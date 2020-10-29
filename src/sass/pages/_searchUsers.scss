@@ -1,0 +1,44 @@
+.usersContainer {
+  min-height: 150vh;
+}
+
+.users {
+  padding: 5vh 7vw;
+  &__formTitle {
+    @include title();
+  }
+  &__searchForm {
+    position: relative;
+    margin-bottom: 50px;
+    height: 40px;
+  }
+  &__searchInput {
+    @include searchInput();
+  }
+  &__search {
+    @include searchIcon();
+  }
+  &__item {
+    position: relative;
+    margin: 3vh auto;
+    padding: 10px 20px;
+    height: 40px;
+    width: 75%;
+    background-color: $item-backGround;
+    border-radius: 5px;
+  }
+  &__login {
+    margin: 0;
+    font-size: 18px;
+    height: 100%;
+    width: 50%;
+    line-height: 20px;
+  }
+  &__link {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+  }
+}
