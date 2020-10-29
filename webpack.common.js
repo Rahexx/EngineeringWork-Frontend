@@ -6,6 +6,7 @@ module.exports = {
     admin: './src/admin.js',
     rooms: './src/rooms.js',
     favourite: './src/favourite.js',
+    users: './src/app/searchUsers.js',
   },
   module: {
     rules: [
