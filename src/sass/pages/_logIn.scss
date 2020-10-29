@@ -8,7 +8,8 @@
   display: grid;
   grid-template: 20vh 50vh 10vh 20vh / 100vw;
   @include mq(small) {
-    grid-template: 30vh 75vh 30vh / 100vw;
+    height: 145vh;
+    grid-template: 30vh 75vh 20vh 20vh/ 100vw;
   }
   @include mq(large) {
     position: absolute;
@@ -16,7 +17,7 @@
     left: 50vw;
     height: 75vh;
     width: 50vw;
-    grid-template: 20vh 35vh 20vh / 100%;
+    grid-template: 20vh 35vh 10vh 10vh/ 100%;
     transform: translate(-50%, -50%);
     background-color: white;
     border-radius: 20px;
@@ -104,10 +105,19 @@
     text-align: center;
     color: $form-grey;
     @include mq(small) {
-      margin-top: 15vh;
+      margin-top: 10vh;
     }
     @include mq(large) {
-      margin-top: 80px;
+      margin-top: 40px;
+    }
+    &--second {
+      @include mq(small) {
+        margin-top: 2vh;
+        align-self: start;
+      }
+    }
+    &--signUp {
+      margin-top: 0;
     }
   }
   &__link {

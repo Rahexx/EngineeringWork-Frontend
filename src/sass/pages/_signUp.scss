@@ -3,14 +3,20 @@
 }
 
 .signHolder {
-  padding: 50px 15px 0;
+  padding: 30px 15px 0;
   height: 100vh;
   width: 100vw;
   text-align: center;
+  @include mq(small) {
+    height: 175vh;
+  }
+  @include mq(large) {
+    height: 100vh;
+  }
   &__header {
     font-size: 35px;
     font-weight: 600;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
   }
   &__progressBar {
     display: flex;
@@ -132,7 +138,7 @@
   }
   &__field {
     position: relative;
-    margin: 20vw auto;
+    margin: 13vw auto;
     height: 5vh;
     width: 75vw;
     display: flex;
@@ -218,7 +224,7 @@
     height: calc(100% + 5px);
     width: 100%;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
     background-color: $maximum-blue;
