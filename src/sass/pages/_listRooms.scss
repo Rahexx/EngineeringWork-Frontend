@@ -58,7 +58,13 @@
   }
   &__submit {
     margin: 0 auto;
+    transition: 0.5s;
     @include submit();
+    &:hover {
+      background-color: $prussian-blue;
+      color: $powder-blue;
+      cursor: pointer;
+    }
   }
   &__heart {
     position: absolute;
@@ -67,5 +73,12 @@
     transform: translateX(-50%);
     font-size: 28px;
     color: $error;
+    @include mq(small) {
+      left: 95%;
+      bottom: 85%;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

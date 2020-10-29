@@ -5,6 +5,8 @@ const main = document.querySelector('.searchRooms__list');
 const hearts = document.querySelectorAll('.searchRooms__heart');
 const pagination = new Pagination([...items], true);
 
+pagination.createPagination(main);
+
 function changeHeart(item) {
   if (item.classList.contains('far')) {
     item.classList.remove('far');
