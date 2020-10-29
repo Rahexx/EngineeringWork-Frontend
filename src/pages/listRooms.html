@@ -17,8 +17,8 @@
   </head>
   <body class="adminContainer container">
     <header class="header">
-      <h1 class="header__title">Panel administracyjny</h1>
-      <p class="header__description">Tutaj możesz usunąć lub z edytować użytkownika</p>
+      <h1 class="header__title">Lista pokoi</h1>
+      <p class="header__description">Tutaj możesz usunąć znaleźć odpowiedni pokój dla siebie i skontaktować się z właścielem</p>
       <i class="fas fa-angle-double-down header__icon"></i>
     </header>
     <div class="burger"><i class="fas fa-bars"></i></div>
@@ -41,8 +41,68 @@
         </li>
       </ul>
     </nav>
-    <main class="adminPanel">
-
+    <main class="searchRooms">
+      <form  class="searchRooms__form">
+        <div class="signHolder__field">
+          <input class="signHolder__input" type="text">
+          <label class="signHolder__label" for="login">Miejscowowść:</label>
+          <p class="signHolder__error">Wiadomość errora</p>
+        </div>
+        <div class="signHolder__field">
+          <input class="signHolder__input" type="number">
+          <label class="signHolder__label">Cena od:</label>
+          <p class="signHolder__error">Wiadomość errora</p>
+        </div>
+        <div class="signHolder__field">
+          <input class="signHolder__input" type="number">
+          <label class="signHolder__label">Cena do:</label>
+          <p class="signHolder__error">Wiadomość errora</p>
+        </div>
+        <div class="signHolder__field">
+          <input class="signHolder__button signHolder__button--submit" type="submit" value="Szukaj">
+        </div>
+      </form>
+      <ul class="searchRooms__list">
+        <li class="mainInfo__roomItem">
+          <img
+          src=".././assets/room.jpg"
+          alt="zdjecie pokoju"
+          class="mainInfo__ImagesRoom"
+          />
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem">
+          <img
+          src=".././assets/room.jpg"
+          alt="zdjecie pokoju"
+          class="mainInfo__ImagesRoom"
+          />
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem">
+          <img
+          src=".././assets/room.jpg"
+          alt="zdjecie pokoju"
+          class="mainInfo__ImagesRoom"
+          />
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+      </ul>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; Prawa zastrzeżone przez Andrzej Łuszcz</p>
