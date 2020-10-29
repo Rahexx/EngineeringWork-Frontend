@@ -60,4 +60,12 @@
     margin: 0 auto;
     @include submit();
   }
+  &__heart {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    color: $error;
+  }
 }
