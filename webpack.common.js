@@ -5,6 +5,7 @@ module.exports = {
     signUp: './src/signUp.js',
     admin: './src/admin.js',
     rooms: './src/rooms.js',
+    favourite: './src/favourite.js',
   },
   module: {
     rules: [
