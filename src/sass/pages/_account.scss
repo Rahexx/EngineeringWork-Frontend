@@ -47,5 +47,8 @@
       width: 25vw;
       margin: 10vh calc(61vw / 2) 0;
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
