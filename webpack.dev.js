@@ -70,6 +70,16 @@ module.exports = merge(common, {
       },
       chunks: ['main'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'favourite.html',
+      template: './src/pages/favourite.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [

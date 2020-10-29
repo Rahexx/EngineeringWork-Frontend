@@ -64,5 +64,10 @@
   &__link {
     text-decoration: none;
     color: $blue-sapphire;
+    transition: 0.5s;
+    &:hover {
+      color: $prussian-blue;
+      cursor: pointer;
+    }
   }
 }
