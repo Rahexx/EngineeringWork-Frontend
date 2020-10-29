@@ -1,0 +1,68 @@
+.room {
+  padding: 7vh 5vw;
+  @include mq(small) {
+    margin-bottom: 10vh;
+  }
+  @include mq(large) {
+    margin-bottom: 0;
+  }
+  &__image {
+    width: 100%;
+    @include mq(large) {
+      width: 75%;
+      transform: translateX(calc(43vw - 50%));
+    }
+    @include mq(extra-large) {
+      width: 50%;
+    }
+  }
+  &__title {
+    margin: 4vh auto 10vh;
+    font-size: 26px;
+    text-align: center;
+    @include mq(small) {
+      margin: 13vh auto;
+    }
+  }
+  &__descritpion {
+    margin-bottom: 10vh;
+    font-size: 18px;
+    line-height: 26px;
+    @include mq(large) {
+      margin: 0 auto 10vh;
+      width: 75%;
+    }
+    @include mq(extra-large) {
+      width: 50%;
+    }
+  }
+  &__price,
+  &__location {
+    margin-bottom: 2vh;
+    font-size: 17px;
+    @include mq(small) {
+      margin-bottom: 5vh;
+    }
+    @include mq(large) {
+      margin: 0 auto 5vh;
+      width: 75%;
+    }
+    @include mq(extra-large) {
+      width: 50%;
+    }
+  }
+  &__contact {
+    margin-top: 5vh;
+    text-align: center;
+    @include mq(small) {
+      margin-top: 12vh;
+    }
+    @include mq(large) {
+      margin-top: 8vh;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: $blue-sapphire;
+  }
+}
