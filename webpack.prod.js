@@ -91,6 +91,16 @@ module.exports = merge(common, {
         },
         chunks: ['main', 'favourite'],
       }),
+      new HtmlWebpackPlugin({
+        filename: 'account.html',
+        template: './src/pages/account.html',
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true,
+        },
+        chunks: ['main'],
+      }),
     ],
   },
   module: {
