@@ -51,8 +51,8 @@ module.exports = merge(common, {
       chunks: ['main', 'admin'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'admin.html',
-      template: './src/pages/pages.html',
+      filename: 'listRooms.html',
+      template: './src/pages/listRooms.html',
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
