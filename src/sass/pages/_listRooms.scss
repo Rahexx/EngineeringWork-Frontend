@@ -1,0 +1,63 @@
+.searchRooms {
+  padding: 5vh 4vw;
+  @include mq(small) {
+    padding: 10vh 4vw;
+  }
+  &__link {
+    color: #000000;
+    text-decoration: none;
+    @include mq(small) {
+      margin: auto 10px;
+      height: 90%;
+      width: 45%;
+      display: inline-block;
+    }
+    &--header {
+      @include mq(small) {
+        width: 100%;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include mq(small) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include mq(large) {
+      margin: 0 auto;
+      width: 75%;
+    }
+    @include mq(extra-large) {
+      width: 50%;
+    }
+  }
+  &__field {
+    position: relative;
+    margin: 22px auto;
+    height: 40px;
+    width: 75%;
+    @include mq(small) {
+      width: 45%;
+    }
+  }
+  &__input {
+    @include input();
+    &:focus {
+      border: 1px solid $maximum-blue;
+    }
+  }
+  &__label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+  &__error {
+    display: none;
+  }
+  &__submit {
+    margin: 0 auto;
+    @include submit();
+  }
+}

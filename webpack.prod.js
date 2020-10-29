@@ -69,7 +69,7 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true,
         },
-        chunks: ['main'],
+        chunks: ['main', 'rooms'],
       }),
     ],
   },

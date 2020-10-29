@@ -1,10 +1,12 @@
 class Pagination {
-  constructor(items) {
+  constructor(items, isSmallBlock = false) {
     this.items = items;
     this.numberItems = items.length;
     this.maximumNumber = 10;
     this.numberPages = this.numberItems / this.maximumNumber;
     this.activePage = 1;
+    // special for list rooms because in mobile portrait is block, but the rest volumes is flex
+    this.isSmallBlock = isSmallBlock;
   }
 
   hideElements() {
@@ -18,7 +20,12 @@ class Pagination {
     const to = (this.activePage * 10);
 
     for (let i = from; i < to; i++) {
-      this.items[i].style.display = 'flex';
+
+      if(this.isSmallBlock && document.body.offsetWidth < 567){
+        this.items[i].style.display = 'block';
+      }else{
+        this.items[i].style.display = 'flex';
+      }
       if (i === this.numberItems - 1) return;
     }
   }

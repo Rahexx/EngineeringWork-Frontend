@@ -169,13 +169,7 @@
     }
   }
   &__input {
-    padding-left: 15px;
-    height: 100%;
-    width: 100%;
-    border: 1px solid $form-grey;
-    border-radius: 5px;
-    font-size: 18px;
-    outline: none;
+    @include input();
     @include mq(small) {
       height: 140%;
       font-size: 14px;
@@ -220,17 +214,10 @@
   }
   &__button {
     margin-top: -20px;
-    border: none;
-    height: calc(100% + 5px);
-    width: 100%;
-    border-radius: 5px;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    background-color: $maximum-blue;
-    color: $allice-blue;
-    text-transform: uppercase;
-    outline: none;
+    @include submit();
     @include mq(small) {
       height: 190%;
     }

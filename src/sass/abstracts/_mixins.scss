@@ -54,3 +54,24 @@ $breakpoints: (
   font-family: 'Open Sans', sans-serif;
   background-color: $background-collor;
 }
+
+@mixin input() {
+  padding-left: 15px;
+  border: 1px solid $form-grey;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+}
+
+@mixin submit() {
+  border: none;
+  height: calc(100% + 5px);
+  width: 100%;
+  border-radius: 5px;
+  background-color: $maximum-blue;
+  color: $allice-blue;
+  text-transform: uppercase;
+  outline: none;
+}

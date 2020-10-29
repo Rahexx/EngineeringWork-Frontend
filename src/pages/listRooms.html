@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="adminContainer container">
+  <body class="roomsContainer container">
     <header class="header">
       <h1 class="header__title">Lista pokoi</h1>
       <p class="header__description">Tutaj możesz usunąć znaleźć odpowiedni pokój dla siebie i skontaktować się z właścielem</p>
@@ -43,60 +43,246 @@
     </nav>
     <main class="searchRooms">
       <form  class="searchRooms__form">
-        <div class="signHolder__field">
-          <input class="signHolder__input" type="text">
-          <label class="signHolder__label" for="login">Miejscowowść:</label>
-          <p class="signHolder__error">Wiadomość errora</p>
+        <div class="searchRooms__field">
+          <input class="searchRooms__input" type="text">
+          <label class="searchRooms__label" for="login">Miejscowowść:</label>
+          <p class="searchRooms__error">Wiadomość errora</p>
         </div>
-        <div class="signHolder__field">
-          <input class="signHolder__input" type="number">
-          <label class="signHolder__label">Cena od:</label>
-          <p class="signHolder__error">Wiadomość errora</p>
+        <div class="searchRooms__field">
+          <input class="searchRooms__input" type="number">
+          <label class="searchRooms__label">Cena od:</label>
+          <p class="searchRooms__error">Wiadomość errora</p>
         </div>
-        <div class="signHolder__field">
-          <input class="signHolder__input" type="number">
-          <label class="signHolder__label">Cena do:</label>
-          <p class="signHolder__error">Wiadomość errora</p>
+        <div class="searchRooms__field">
+          <input class="searchRooms__input" type="number">
+          <label class="searchRooms__label">Cena do:</label>
+          <p class="searchRooms__error">Wiadomość errora</p>
         </div>
-        <div class="signHolder__field">
-          <input class="signHolder__button signHolder__button--submit" type="submit" value="Szukaj">
+        <div class="searchRooms__field">
+          <input class="searchRooms__submit" type="submit" value="Szukaj">
         </div>
       </form>
       <ul class="searchRooms__list">
-        <li class="mainInfo__roomItem">
-          <img
-          src=".././assets/room.jpg"
-          alt="zdjecie pokoju"
-          class="mainInfo__ImagesRoom"
-          />
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
           <div class="mainInfo__textHolder">
-            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
             <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
             <p class="mainInfo__price">1000zł / miesiąc</p>
             <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
           </div>
         </li>
-        <li class="mainInfo__roomItem">
-          <img
-          src=".././assets/room.jpg"
-          alt="zdjecie pokoju"
-          class="mainInfo__ImagesRoom"
-          />
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
           <div class="mainInfo__textHolder">
-            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
             <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
             <p class="mainInfo__price">1000zł / miesiąc</p>
             <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
           </div>
         </li>
-        <li class="mainInfo__roomItem">
-          <img
-          src=".././assets/room.jpg"
-          alt="zdjecie pokoju"
-          class="mainInfo__ImagesRoom"
-          />
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
           <div class="mainInfo__textHolder">
-            <h3 class="mainInfo__roomTitle">Pokój tanio z Wi-fi</h3>
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
+            <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
+            <p class="mainInfo__price">1000zł / miesiąc</p>
+            <p class="mainInfo__location">Bytom, Centrum - 26.08</p>
+          </div>
+        </li>
+        <li class="mainInfo__roomItem mainInfo__roomItem--item" data-value="download">
+          <a class="searchRooms__link" href="#">
+            <img
+            src=".././assets/room.jpg"
+            alt="zdjecie pokoju"
+            class="mainInfo__ImagesRoom mainInfo__ImagesRoom--rooms"
+            />
+          </a>
+          <div class="mainInfo__textHolder">
+            <h3 class="mainInfo__roomTitle"><a class="searchRooms__link searchRooms__link--header" href="#">Pokój tanio z Wi-fi</a></h3>
             <p class="mainInfo__roomDescritpion">Świetny pokój w centrum miasta i to bardzo tanio. Dostęp do kuchni i łazienki oraz darmowe Wi-fi</p>
             <p class="mainInfo__price">1000zł / miesiąc</p>
             <p class="mainInfo__location">Bytom, Centrum - 26.08</p>

@@ -55,9 +55,17 @@
       height: 40vh;
       width: 75vw;
     }
+    &--item {
+      margin: 75px auto;
+    }
   }
   &__ImagesRoom {
     @include imageItem;
+    &--rooms {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
   &__textHolder {
     @include mq(small) {

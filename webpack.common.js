@@ -4,6 +4,7 @@ module.exports = {
     logIn: './src/logIn.js',
     signUp: './src/signUp.js',
     admin: './src/admin.js',
+    rooms: './src/rooms.js',
   },
   module: {
     rules: [
