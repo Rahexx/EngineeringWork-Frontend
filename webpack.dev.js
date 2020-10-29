@@ -60,6 +60,16 @@ module.exports = merge(common, {
       },
       chunks: ['main', 'rooms'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'room.html',
+      template: './src/pages/room.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [
