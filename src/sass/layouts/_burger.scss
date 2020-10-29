@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $allice-blue;
+  background-color: $carolina-blue;
   z-index: 4;
   cursor: pointer;
   @include mq(large) {
@@ -17,7 +17,7 @@
     display: none;
   }
   i {
-    color: $blue-sapphire;
+    color: $allice-blue;
     font-size: 25px;
   }
 }
