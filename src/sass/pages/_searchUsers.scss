@@ -18,6 +18,12 @@
   &__search {
     @include searchIcon();
   }
+  &__list {
+    @include mq(extra-large) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
   &__item {
     position: relative;
     margin: 3vh auto;
@@ -26,6 +32,14 @@
     width: 75%;
     background-color: $item-backGround;
     border-radius: 5px;
+    @include mq(small) {
+      margin: 6vh auto;
+      width: 50%;
+    }
+    @include mq(extra-large) {
+      margin: 6vh 3vw;
+      width: 25%;
+    }
   }
   &__login {
     margin: 0;
@@ -40,5 +54,6 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 22px;
+    color: $blue-sapphire;
   }
 }
