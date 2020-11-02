@@ -1,4 +1,4 @@
-import './sass/main.scss';
+import '../sass/main.scss';
 
 const slidePage = document.querySelector('.signHolder__page--slidePage');
 const firstNextBtn = document.querySelector('.signHolder__button--first');
