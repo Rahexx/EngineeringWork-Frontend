@@ -100,6 +100,16 @@ module.exports = merge(common, {
       },
       chunks: ['main', 'users'],
     }),
+    new HtmlWebpackPlugin({
+      filename: 'profile.html',
+      template: './src/pages/profile.html',
+      minify: {
+        removeAttributeQuotes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+      },
+      chunks: ['main'],
+    }),
   ],
   module: {
     rules: [
