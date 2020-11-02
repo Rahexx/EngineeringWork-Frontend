@@ -121,6 +121,16 @@ module.exports = merge(common, {
         },
         chunks: ['main'],
       }),
+      new HtmlWebpackPlugin({
+        filename: 'messages.html',
+        template: './src/pages/messages.html',
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true,
+        },
+        chunks: ['main'],
+      }),
     ],
   },
   module: {
