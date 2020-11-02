@@ -17,8 +17,8 @@
     background-color: transparent;
   }
   @include mq(extra-large) {
-    left: 40vw;
-    width: 55vw;
+    left: 30vw;
+    width: 65vw;
   }
   &--fixed {
     @include mq(large) {
@@ -33,7 +33,7 @@
   }
   &__list {
     margin-top: 15%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -65,13 +65,10 @@
       transition: 0.5s;
     }
     &:hover {
-      color: $prussian-blue;
+      color: $maximum-blue;
     }
     &--active {
       color: $maximum-blue;
-      @include mq(large) {
-        color: $prussian-blue;
-      }
     }
     &--logIn {
       display: inline-block;
