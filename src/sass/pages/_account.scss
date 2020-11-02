@@ -5,48 +5,16 @@
 .accountPanel {
   padding: 5vh 7vw;
   &__titleDate {
-    font-size: 23px;
-    text-align: center;
+    @include accountTitle();
   }
   &__infoHolder {
-    margin: 10vh auto 0;
-    @include mq(small) {
-      margin-bottom: 10vh;
-    }
-    @include mq(large) {
-      margin-bottom: 5vh;
-    }
+    @include accountInfoHolder(10vh);
   }
   &__info {
-    margin: 2vh 0;
-    font-size: 18px;
-    @include mq(small) {
-      margin: 5vh 0;
-    }
-    @include mq(large) {
-      margin: 3vh 0;
-      text-align: center;
-    }
+    @include accountInfo();
   }
   &__delete {
-    margin: 5vh 18vw 0;
-    border: none;
-    height: 5vh;
-    width: 50vw;
-    color: $allice-blue;
-    background-color: $error;
-    text-transform: uppercase;
-    border-radius: 7px;
-    @include mq(small) {
-      height: 10vh;
-      width: calc(100vw / 3);
-      margin: 10vh calc(52.7vw / 2) 0;
-    }
-    @include mq(small) {
-      height: 6vh;
-      width: 25vw;
-      margin: 10vh calc(61vw / 2) 0;
-    }
+    @include accountButton($error);
     &:hover {
       cursor: pointer;
     }

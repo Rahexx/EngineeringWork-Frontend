@@ -150,3 +150,51 @@ $breakpoints: (
     left: 58.5%;
   }
 }
+
+@mixin accountTitle() {
+  font-size: 26px;
+  text-align: center;
+}
+
+@mixin accountInfoHolder($top) {
+  margin: $top auto 0;
+  @include mq(small) {
+    margin-bottom: 10vh;
+  }
+  @include mq(large) {
+    margin-bottom: 5vh;
+  }
+}
+
+@mixin accountInfo() {
+  margin: 2vh 0;
+  @include mq(small) {
+    margin: 5vh 0;
+    font-size: 18px;
+  }
+  @include mq(large) {
+    margin: 3vh 0;
+    text-align: center;
+  }
+}
+
+@mixin accountButton($background) {
+  margin: 5vh 18vw 0;
+  border: none;
+  height: 5vh;
+  width: 50vw;
+  color: $allice-blue;
+  background-color: $background;
+  text-transform: uppercase;
+  border-radius: 7px;
+  @include mq(small) {
+    height: 10vh;
+    width: calc(100vw / 3);
+    margin: 10vh calc(52.7vw / 2) 0;
+  }
+  @include mq(small) {
+    height: 6vh;
+    width: 25vw;
+    margin: 10vh calc(61vw / 2) 0;
+  }
+}

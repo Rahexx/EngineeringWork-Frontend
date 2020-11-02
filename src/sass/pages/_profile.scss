@@ -1,0 +1,33 @@
+.profileContainer {
+  min-height: 150vh;
+}
+
+.profilePanel {
+  padding: 5vh 7vw;
+  &__login {
+    @include accountTitle();
+  }
+  &__title {
+    margin: 5vh auto;
+    font-size: 20px;
+    text-align: center;
+    @include mq(small) {
+      margin: 10vh auto;
+    }
+    @include mq(large) {
+      margin: 7vh auto 5vh;
+    }
+  }
+  &__infoHolder {
+    @include accountInfoHolder(0);
+  }
+  &__info {
+    @include accountInfo();
+  }
+  &__message {
+    @include accountButton($carolina-blue);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
