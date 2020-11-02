@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import Pagination from './app/Pagination';
+import Pagination from './Pagination';
 
 const items = document.querySelectorAll('[data-value="download"]');
 const main = document.querySelector('.adminPanel__listUser');

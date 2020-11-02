@@ -1,4 +1,4 @@
-import Pagination from './app/Pagination';
+import Pagination from './Pagination';
 
 const items = document.querySelectorAll('[data-value="download"]');
 const main = document.querySelector('.searchRooms__list');

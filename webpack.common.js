@@ -1,11 +1,11 @@
 module.exports = {
   entry: {
     main: './src/index.js',
-    logIn: './src/logIn.js',
-    signUp: './src/signUp.js',
-    admin: './src/admin.js',
-    rooms: './src/rooms.js',
-    favourite: './src/favourite.js',
+    logIn: './src/app/logIn.js',
+    signUp: './src/app/signUp.js',
+    admin: './src/app/admin.js',
+    rooms: './src/app/rooms.js',
+    favourite: './src/app/favourite.js',
     users: './src/app/searchUsers.js',
   },
   module: {
