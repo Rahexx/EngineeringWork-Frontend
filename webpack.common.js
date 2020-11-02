@@ -7,6 +7,7 @@ module.exports = {
     rooms: './src/app/rooms.js',
     favourite: './src/app/favourite.js',
     users: './src/app/searchUsers.js',
+    messages: './src/app/messages.js',
   },
   module: {
     rules: [

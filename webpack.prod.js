@@ -129,7 +129,7 @@ module.exports = merge(common, {
           collapseWhitespace: true,
           removeComments: true,
         },
-        chunks: ['main'],
+        chunks: ['messages'],
       }),
     ],
   },
