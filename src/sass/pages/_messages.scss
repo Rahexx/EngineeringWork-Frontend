@@ -1,0 +1,52 @@
+.messagesContainer {
+  min-height: 0;
+  height: 100vh;
+  grid-template: 90vh 10vh / 100vw;
+}
+
+.userPanel {
+  &__return {
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+    font-size: 14px;
+    color: $prussian-blue;
+  }
+  &__arrow {
+    margin-right: 3vw;
+    font-size: 14px;
+  }
+}
+
+.userContainer {
+  padding: 12vh 5vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $blue-sapphire;
+  z-index: 2;
+  &__title {
+    font-size: 30px;
+    color: $allice-blue;
+  }
+}
+
+.userList {
+  height: 50vh;
+  width: 75%;
+  overflow-x: scroll;
+  &__title {
+    margin: 5vh 0;
+    font-size: 19px;
+    color: $powder-blue;
+  }
+  &__item {
+    margin: 2vh 0;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    color: $powder-blue;
+  }
+}
