@@ -15,10 +15,17 @@
     top: 3vh;
     left: 5vw;
     font-size: 14px;
+    @include mq(small) {
+      left: 3vw;
+      top: 5vh;
+    }
   }
   &__arrow {
     margin-right: 3vw;
     font-size: 14px;
+    @include mq(small) {
+      margin-right: 1vw;
+    }
   }
 }
 
@@ -71,6 +78,9 @@
     height: 90vh;
     background-color: $carolina-blue;
     overflow: scroll;
+    @include mq(small) {
+      height: 80vh;
+    }
   }
   &__item {
     margin: 10px 0 10px 25%;
@@ -88,6 +98,7 @@
   }
   &__text {
     margin: 10px 0 0;
+    min-width: 5vw;
     padding: 15px;
     background-color: $background-collor;
     border-radius: 10px;
@@ -95,6 +106,9 @@
   &__serve {
     height: 10vh;
     display: flex;
+    @include mq(small) {
+      height: 20vh;
+    }
   }
   &__users {
     margin: auto 30px;
@@ -107,16 +121,27 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @include mq(small) {
+      width: 85vw;
+      justify-content: flex-end;
+    }
   }
   &__input {
     padding: 10px 15px;
     border: none;
     border-radius: 25px;
     outline: none;
+    @include mq(small) {
+      width: 50vw;
+      margin-right: 15vw;
+    }
   }
   &__button {
     border: none;
     background-color: transparent;
+    @include mq(small) {
+      margin-right: 5vw;
+    }
   }
   &__send {
     font-size: 32px;
