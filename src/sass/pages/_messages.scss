@@ -1,16 +1,20 @@
 .messagesContainer {
   min-height: 0;
   height: 100vh;
-  grid-template: 90vh 10vh / 100vw;
 }
 
 .userPanel {
+  position: relative;
+  overflow: hidden;
+  &__link {
+    text-decoration: none;
+    color: $prussian-blue;
+  }
   &__return {
     position: absolute;
     top: 3vh;
     left: 5vw;
     font-size: 14px;
-    color: $prussian-blue;
   }
   &__arrow {
     margin-right: 3vw;
@@ -59,7 +63,7 @@
   width: 100vw;
   background-color: $item-backGround;
   z-index: 4;
-  transform: translateX(100vh);
+  transform: translateX(100vw);
   &__messages {
     padding: 3vh 10vw;
     display: flex;
