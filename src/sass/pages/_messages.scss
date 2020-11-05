@@ -6,18 +6,24 @@
 .userPanel {
   position: relative;
   overflow: hidden;
-  &__link {
-    text-decoration: none;
-    color: $prussian-blue;
+  background-color: $item-backGround;
+  @include mq(large) {
+    height: 100vh;
   }
-  &__return {
+  &__link {
     position: absolute;
     top: 3vh;
     left: 5vw;
     font-size: 14px;
+    text-decoration: none;
+    color: $prussian-blue;
+    z-index: 3;
     @include mq(small) {
       left: 3vw;
       top: 5vh;
+    }
+    @include mq(large) {
+      top: 3vh;
     }
   }
   &__arrow {
@@ -30,6 +36,7 @@
 }
 
 .userContainer {
+  position: relative;
   padding: 12vh 5vw;
   height: 100%;
   display: flex;
@@ -37,6 +44,12 @@
   align-items: center;
   background-color: $blue-sapphire;
   z-index: 2;
+  @include mq(large) {
+    width: 50%;
+  }
+  @include mq(extra-large) {
+    width: 25%;
+  }
   &__title {
     font-size: 30px;
     color: $allice-blue;
@@ -46,7 +59,7 @@
 .userList {
   height: 50vh;
   width: 75%;
-  overflow-x: scroll;
+  overflow: hidden;
   &__title {
     margin: 5vh 0;
     font-size: 19px;
@@ -59,27 +72,45 @@
     text-align: center;
     line-height: 30px;
     color: $powder-blue;
+    @include mq(large) {
+      &:hover {
+        color: $carolina-blue;
+        cursor: pointer;
+      }
+    }
   }
 }
 
 .chat {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100vw;
   height: 100vh;
   width: 100vw;
   background-color: $item-backGround;
   z-index: 4;
-  transform: translateX(100vw);
+  @include mq(large) {
+    left: -50vw;
+    width: 50vw;
+    z-index: 1;
+  }
+  @include mq(extra-large) {
+    left: -75vw;
+    width: 75vw;
+  }
   &__messages {
     padding: 3vh 10vw;
     display: flex;
     flex-direction: column-reverse;
     height: 90vh;
     background-color: $carolina-blue;
-    overflow: scroll;
+    overflow-y: scroll;
     @include mq(small) {
       height: 80vh;
+    }
+    @include mq(large) {
+      padding: 3vh 2vw;
+      height: 90vh;
     }
   }
   &__item {
@@ -109,12 +140,18 @@
     @include mq(small) {
       height: 20vh;
     }
+    @include mq(large) {
+      height: 10vh;
+    }
   }
   &__users {
     margin: auto 30px;
     display: inline-block;
     font-size: 32px;
     color: $maximum-blue;
+    @include mq(large) {
+      display: none;
+    }
   }
   &__form {
     width: 75vw;
@@ -124,6 +161,10 @@
     @include mq(small) {
       width: 85vw;
       justify-content: flex-end;
+    }
+    @include mq(large) {
+      justify-content: center;
+      width: 50vw;
     }
   }
   &__input {
@@ -135,12 +176,19 @@
       width: 50vw;
       margin-right: 15vw;
     }
+    @include mq(large) {
+      margin: 0 50px;
+      width: 300px;
+    }
   }
   &__button {
     border: none;
     background-color: transparent;
     @include mq(small) {
       margin-right: 5vw;
+    }
+    @include mq(large) {
+      margin-right: 0;
     }
   }
   &__send {
