@@ -25,8 +25,10 @@
   position: relative;
   margin: 8vh 0;
   padding: 5vw;
+  height: 8vh;
   background-color: $blue-sapphire;
   border-radius: 3px;
+  overflow: hidden;
   @include mq(large) {
     margin: 10vh auto;
     width: 66vw;
@@ -46,6 +48,7 @@
     left: 42vw;
     font-size: 18px;
     color: $powder-blue;
+    // transform: rotate(180deg);
     @include mq(small) {
       left: 25vw;
     }
