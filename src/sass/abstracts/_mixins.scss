@@ -211,4 +211,11 @@ $breakpoints: (
   @include mq(small) {
     min-height: 15vw;
   }
+  @include mq(large) {
+    min-height: 10vw;
+  }
+  @include mq(extra-large) {
+    padding: 2vw 0;
+    min-height: 5vw;
+  }
 }
