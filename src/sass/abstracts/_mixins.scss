@@ -192,7 +192,7 @@ $breakpoints: (
     width: calc(100vw / 3);
     margin: 10vh calc(52.7vw / 2) 0;
   }
-  @include mq(small) {
+  @include mq(large) {
     height: 6vh;
     width: 25vw;
     margin: 10vh calc(61vw / 2) 0;
@@ -208,4 +208,7 @@ $breakpoints: (
   justify-content: space-evenly;
   background-color: $item-backGround;
   border-radius: 7px;
+  @include mq(small) {
+    min-height: 15vw;
+  }
 }
