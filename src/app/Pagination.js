@@ -20,10 +20,9 @@ class Pagination {
     const to = (this.activePage * 10);
 
     for (let i = from; i < to; i++) {
-
-      if(this.isSmallBlock && document.body.offsetWidth < 567){
+      if (this.isSmallBlock && document.body.offsetWidth < 567) {
         this.items[i].style.display = 'block';
-      }else{
+      } else {
         this.items[i].style.display = 'flex';
       }
       if (i === this.numberItems - 1) return;
