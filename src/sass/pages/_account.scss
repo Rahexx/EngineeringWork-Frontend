@@ -48,7 +48,6 @@
     left: 42vw;
     font-size: 18px;
     color: $powder-blue;
-    // transform: rotate(180deg);
     @include mq(small) {
       left: 25vw;
     }
@@ -238,14 +237,12 @@
   &__item {
     @include listItemInfo();
     align-items: center;
+    overflow: hidden;
   }
   &__id {
     width: 7vw;
     text-align: center;
     @include mq(large) {
-      width: 5vw;
-    }
-    @include mq(extra-large) {
       width: 3vw;
     }
   }
@@ -253,33 +250,22 @@
     width: 20vw;
     text-align: center;
     @include mq(small) {
+      width: 13vw;
+    }
+    @include mq(large) {
+      width: 12vw;
+    }
+    @include mq(extra-large) {
+      width: 8vw;
+    }
+  }
+  &__deadline,
+  &__status,
+  &__login {
+    width: 25vw;
+    text-align: center;
+    @include mq(small) {
       width: 15vw;
-    }
-    @include mq(large) {
-      width: 12vw;
-    }
-    @include mq(extra-large) {
-      width: 8vw;
-    }
-  }
-  &__deadline {
-    width: 25vw;
-    text-align: center;
-    @include mq(small) {
-      width: 18vw;
-    }
-    @include mq(large) {
-      width: 12vw;
-    }
-    @include mq(extra-large) {
-      width: 8vw;
-    }
-  }
-  &__status {
-    width: 25vw;
-    text-align: center;
-    @include mq(small) {
-      width: 19vw;
     }
     @include mq(large) {
       width: 12vw;

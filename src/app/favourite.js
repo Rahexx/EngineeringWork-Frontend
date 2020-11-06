@@ -15,10 +15,13 @@ pagination.createPagination(main);
     const brother = parent.nextSibling;
 
     const tl = gsap.timeline();
-    tl.to(parent, { x: pageWidth, duration: 1 });
-    tl.to(parent, {
-      height: 0, margin: 0, padding: 0, duration: 0.5,
-    });
-    tl.to(brother, { marginTop: 0, duration: 0.5 });
+    tl.to(parent, { x: pageWidth, duration: 1 })
+      .to(parent, {
+        height: 0,
+        margin: 0,
+        padding: 0,
+        duration: 0.5,
+      })
+      .to(brother, { marginTop: 0, duration: 0.5 });
   });
 });
