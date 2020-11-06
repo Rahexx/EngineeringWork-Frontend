@@ -8,6 +8,7 @@ module.exports = {
     favourite: './src/app/favourite.js',
     users: './src/app/searchUsers.js',
     messages: './src/app/messages.js',
+    account: './src/app/account.js',
   },
   module: {
     rules: [

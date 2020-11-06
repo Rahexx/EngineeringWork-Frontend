@@ -88,7 +88,7 @@ module.exports = merge(common, {
         collapseWhitespace: true,
         removeComments: true,
       },
-      chunks: ['main'],
+      chunks: ['main', 'account'],
     }),
     new HtmlWebpackPlugin({
       filename: 'searchUsers.html',
