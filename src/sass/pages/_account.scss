@@ -113,3 +113,32 @@
     }
   }
 }
+
+.listAgreements {
+  &__item {
+    @include listItemInfo();
+    align-items: center;
+  }
+  &__link {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.listSettlements {
+  &__item {
+    @include listItemInfo();
+    align-items: center;
+  }
+  &__id {
+    width: 7vw;
+    text-align: center;
+  }
+  &__delete {
+    font-size: 25px;
+    color: $error;
+  }
+}
