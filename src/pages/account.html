@@ -71,13 +71,14 @@
         <p class="accountPanel__info">Numer telefonu: 602356111</p>
         <p class="accountPanel__info">Data urodzenia: 11.02.1997r</p>
         <p class="accountPanel__info">płeć: Mężczyzna</p>
-        <p class="accountPanel__info">Czy jest przypisany do pokoju: Tak</p>
+        <p class="accountPanel__info">Czy jest przypisany do pokoju: Nie</p>
+        <p class="accountPanel__info">Czy wynajmuje pokój: Tak</p>
       </div>
-      <div class="listRooms">
-        <h3 class="listRooms__title">Lista pokoi</h3>
-        <i class="fas fa-caret-up"></i>
-        <p class="listRooms__add"><i class="fas fa-plus-circle"></i></p>
-        <ul class="listRooms__list">
+      <div class="listInfo">
+        <h3 class="listInfo__title">Lista pokoi</h3>
+        <i class="fas fa-caret-up listInfo__switch"></i>
+        <p class="listInfo__add"><i class="fas fa-plus-circle"></i></p>
+        <ul class="listRooms">
           <li class="listRooms__item">
             <p class="listRooms__id">1</p>
             <img
@@ -85,8 +86,10 @@
               src=".././assets/room.jpg"
               alt="zdjęcie pokoju"
             />
-            <p class="listRooms__login"><a href="./profile.html">Veex</a></p>
-            <button>Usuń z pokoju</button>
+            <p class="listRooms__login">
+              <a class="listRooms__link" href="./profile.html">Veex</a>
+            </p>
+            <button class="listRooms__btn--delete">Usuń z pokoju</button>
           </li>
           <li class="listRooms__item">
             <p class="listRooms__id">1</p>
@@ -95,8 +98,10 @@
               src=".././assets/room.jpg"
               alt="zdjęcie pokoju"
             />
-            <p class="listRooms__login">Nie ma nikogo przypisanego do pokoju</p>
-            <button>Dodaj do pokoju</button>
+            <p class="listRooms__login listRooms__login--empty">
+              Nie ma nikogo przypisanego do pokoju
+            </p>
+            <button class="listRooms__btn--add">Dodaj do pokoju</button>
           </li>
         </ul>
       </div>

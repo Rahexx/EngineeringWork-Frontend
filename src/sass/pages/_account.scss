@@ -20,3 +20,78 @@
     }
   }
 }
+
+.listInfo {
+  position: relative;
+  margin: 8vh 0;
+  padding: 5vw;
+  background-color: $blue-sapphire;
+  border-radius: 3px;
+  &__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $allice-blue;
+  }
+  &__switch {
+    position: absolute;
+    top: 5vw;
+    left: 33vw;
+    font-size: 18px;
+    color: $powder-blue;
+  }
+  &__add {
+    position: absolute;
+    top: 3vw;
+    left: 40vw;
+    font-size: 23px;
+    color: $powder-blue;
+  }
+}
+
+.listRooms {
+  &__item {
+    margin: 5vw 0;
+    padding: 5vw 0;
+    min-height: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: $item-backGround;
+    border-radius: 7px;
+  }
+  &__id {
+    line-height: 30vw;
+    color: $prussian-blue;
+  }
+  &__image {
+    height: 30vw;
+    width: 30vw;
+    object-fit: cover;
+  }
+  &__login {
+    margin: 0 7vw;
+    line-height: 30vw;
+    &--empty {
+      margin: 0 2vw;
+      width: 20vw;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__link {
+    color: $prussian-blue;
+    text-decoration: none;
+  }
+  &__btn {
+    margin: 9vw auto 0;
+    &--add {
+      @include accountButton(#38b000);
+    }
+    &--delete {
+      @include accountButton($error);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
