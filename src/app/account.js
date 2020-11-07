@@ -2,6 +2,8 @@ import { gsap } from 'gsap';
 
 const switcher = document.querySelectorAll('.listInfo__switch');
 const deleteSettlement = document.querySelectorAll('.listSettlements__delete');
+const changeStatusFault = document.querySelectorAll('.listFaults__change');
+const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
   const parent = e.target.parentElement;
@@ -62,5 +64,18 @@ const closeList = (e) => {
     setInterval(() => {
       parent.remove();
     }, 1500);
+  });
+});
+
+[...changeStatusFault].map((item) => {
+  item.addEventListener('click', (e) => {
+    const previousBrother = e.target.previousElementSibling;
+    const indexArray = faultStatus.indexOf(previousBrother.textContent);
+
+    if (indexArray === 1) {
+      previousBrother.textContent = faultStatus[0];
+    } else {
+      previousBrother.textContent = faultStatus[1];
+    }
   });
 });

@@ -187,6 +187,7 @@ $breakpoints: (
   background-color: $background;
   text-transform: uppercase;
   border-radius: 7px;
+  outline: none;
   @include mq(small) {
     height: 10vh;
     width: calc(100vw / 3);
