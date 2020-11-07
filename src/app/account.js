@@ -1,8 +1,11 @@
 import { gsap } from 'gsap';
 
 const switcher = document.querySelectorAll('.listInfo__switch');
-const deleteSettlement = document.querySelectorAll('.listSettlements__delete');
-const changeStatusFault = document.querySelectorAll('.listFaults__change');
+const deleteSettlementBtn = document.querySelectorAll(
+  '.listSettlements__delete',
+);
+const changeStatusFaultBtn = document.querySelectorAll('.listFaults__change');
+const deleteLandLordBtn = document.querySelectorAll('.listRooms__btn--delete');
 const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
@@ -35,6 +38,45 @@ const closeList = (e) => {
   e.target.dataset.switch = 'false';
 };
 
+const deleteSettlement = (e) => {
+  const parent = e.target.parentElement.parentElement;
+  const pageWidth = document.body.offsetWidth;
+  parent.style.minHeight = '0';
+
+  const tl = gsap.timeline();
+  tl.to(parent, { x: pageWidth, duration: 1 })
+    .to(parent, {
+      height: 0,
+      margin: 0,
+      padding: 0,
+      duration: 0.5,
+    })
+    .to(parent, { display: 'none' });
+
+  setInterval(() => {
+    parent.remove();
+  }, 1500);
+};
+
+const changeStatusFault = (e) => {
+  const previousBrother = e.target.previousElementSibling;
+  const indexArray = faultStatus.indexOf(previousBrother.textContent);
+
+  if (indexArray === 1) {
+    previousBrother.textContent = faultStatus[0];
+  } else {
+    previousBrother.textContent = faultStatus[1];
+  }
+};
+
+const deleteLandLord = (e) => {
+  const previousBrother = e.target.previousElementSibling;
+  previousBrother.textContent = 'Nie ma nikogo przypisanego do pokoju';
+  previousBrother.classList.add('listRooms__login--empty');
+  e.target.classList.remove('listRooms__btn--delete');
+  e.target.classList.add('listRooms__btn--add');
+};
+
 [...switcher].map((item) => {
   item.addEventListener('click', (e) => {
     if (e.target.dataset.switch == 'false') {
@@ -45,37 +87,20 @@ const closeList = (e) => {
   });
 });
 
-[...deleteSettlement].map((item) => {
+[...deleteSettlementBtn].map((item) => {
   item.addEventListener('click', (e) => {
-    const parent = e.target.parentElement.parentElement;
-    const pageWidth = document.body.offsetWidth;
-    parent.style.minHeight = '0';
-
-    const tl = gsap.timeline();
-    tl.to(parent, { x: pageWidth, duration: 1 })
-      .to(parent, {
-        height: 0,
-        margin: 0,
-        padding: 0,
-        duration: 0.5,
-      })
-      .to(parent, { display: 'none' });
-
-    setInterval(() => {
-      parent.remove();
-    }, 1500);
+    deleteSettlement(e);
   });
 });
 
-[...changeStatusFault].map((item) => {
+[...changeStatusFaultBtn].map((item) => {
   item.addEventListener('click', (e) => {
-    const previousBrother = e.target.previousElementSibling;
-    const indexArray = faultStatus.indexOf(previousBrother.textContent);
+    changeStatusFault(e);
+  });
+});
 
-    if (indexArray === 1) {
-      previousBrother.textContent = faultStatus[0];
-    } else {
-      previousBrother.textContent = faultStatus[1];
-    }
+[...deleteLandLordBtn].map((item) => {
+  item.addEventListener('click', (e) => {
+    deleteLandLord(e);
   });
 });
