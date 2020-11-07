@@ -82,7 +82,15 @@ const deleteLandLord = (e) => {
 const openAddRoom = () => {
   const pageWidth = document.body.offsetWidth;
 
-  gsap.to('.addRoom', { x: pageWidth, duration: 1 });
+  if (pageWidth < 1024) {
+    gsap.to('.addRoom', { x: pageWidth, duration: 1 });
+  } else if (pageWidth < 1200) {
+    gsap.to('.addRoom', { y: '15%', duration: 0.1 });
+    gsap.to('.addRoom', { x: pageWidth * 1.25, duration: 1 });
+  } else {
+    gsap.to('.addRoom', { y: '15%', duration: 0.1 });
+    gsap.to('.addRoom', { x: pageWidth * 1.33, duration: 1 });
+  }
 };
 
 const closeAddRoom = () => gsap.to('.addRoom', { x: 0, duration: 1 });
