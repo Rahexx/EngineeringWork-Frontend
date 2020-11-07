@@ -5,16 +5,19 @@ const deleteSettlement = document.querySelectorAll('.listSettlements__delete');
 
 const openList = (e) => {
   const parent = e.target.parentElement;
-  const parentHeight =
-    document.body.offsetWidth < 1200
-      ? parent.offsetHeight * 2
-      : parent.offsetHeight * 4;
+  const child = parent.lastChild.children[0];
   const listLength = parent.lastChild.children.length;
-  const heightItem = parent.lastChild.children[0].offsetHeight;
+  const heightItem = child.offsetHeight;
+  const marginItem = window.getComputedStyle(child).marginTop;
+  const marginItemValue = marginItem.slice(0, marginItem.length - 2);
 
   const tl = gsap.timeline();
   tl.to(parent, {
-    height: `${listLength * heightItem + parentHeight}px`,
+    height: `${
+      parent.offsetHeight +
+      listLength * heightItem +
+      listLength * (marginItemValue * 1.5)
+    }px`,
     duration: 1,
   }).to(e.target, { rotate: 180, duration: 0.3 });
   e.target.dataset.switch = 'true';
@@ -44,8 +47,7 @@ const closeList = (e) => {
   item.addEventListener('click', (e) => {
     const parent = e.target.parentElement.parentElement;
     const pageWidth = document.body.offsetWidth;
-
-    // gsap.to(parent, { scale: 0, duration: 0.3 });
+    parent.style.minHeight = '0';
 
     const tl = gsap.timeline();
     tl.to(parent, { x: pageWidth, duration: 1 })
@@ -56,5 +58,9 @@ const closeList = (e) => {
         duration: 0.5,
       })
       .to(parent, { display: 'none' });
+
+    setInterval(() => {
+      parent.remove();
+    }, 1500);
   });
 });
