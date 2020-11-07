@@ -6,6 +6,8 @@ const deleteSettlementBtn = document.querySelectorAll(
 );
 const changeStatusFaultBtn = document.querySelectorAll('.listFaults__change');
 const deleteLandLordBtn = document.querySelectorAll('.listRooms__btn--delete');
+const addRoomBtn = document.querySelector('.listInfo__add--room');
+const addRoomExit = document.querySelector('.addRoom__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
@@ -77,6 +79,14 @@ const deleteLandLord = (e) => {
   e.target.classList.add('listRooms__btn--add');
 };
 
+const openAddRoom = () => {
+  const pageWidth = document.body.offsetWidth;
+
+  gsap.to('.addRoom', { x: pageWidth, duration: 1 });
+};
+
+const closeAddRoom = () => gsap.to('.addRoom', { x: 0, duration: 1 });
+
 [...switcher].map((item) => {
   item.addEventListener('click', (e) => {
     if (e.target.dataset.switch == 'false') {
@@ -104,3 +114,7 @@ const deleteLandLord = (e) => {
     deleteLandLord(e);
   });
 });
+
+addRoomBtn.addEventListener('click', openAddRoom);
+
+addRoomExit.addEventListener('click', closeAddRoom);
