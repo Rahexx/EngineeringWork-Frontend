@@ -77,7 +77,9 @@
       <div class="listInfo">
         <h3 class="listInfo__title">Lista pokoi</h3>
         <i class="fas fa-caret-up listInfo__switch" data-switch="false"></i>
-        <p class="listInfo__add"><i class="fas fa-plus-circle"></i></p>
+        <p class="listInfo__add listInfo__add--room">
+          <i class="fas fa-plus-circle"></i>
+        </p>
         <ul class="listRooms">
           <li class="listRooms__item">
             <p class="listRooms__id">1</p>
@@ -220,6 +222,48 @@
         </ul>
       </div>
       <button class="accountPanel__delete">Usuń konto</button>
+      <div class="addRoom">
+        <i class="fas fa-times addRoom__exit"></i>
+        <h2 class="addRoom__title">Dodaj nowy pokój</h2>
+        <form class="addRoom__form">
+          <div class="addRoom__field">
+            <label class="addRoom__label">Nazwa ogłoszenia</label>
+            <input
+              class="addRoom__input"
+              type="text"
+              placeholder="Podaj nazwę ogłoszenia"
+            />
+          </div>
+          <div class="addRoom__field">
+            <label class="addRoom__label">Opis</label>
+            <input
+              class="addRoom__input addRoom__input--description"
+              type="text"
+              placeholder="Dodaj opis ogłoszenia"
+            />
+          </div>
+          <div class="addRoom__field">
+            <label class="addRoom__label">Kwota za miesiąc</label>
+            <input
+              class="addRoom__input"
+              type="number"
+              placeholder="Podaj kwotę"
+            />
+          </div>
+          <div class="addRoom__field">
+            <label class="addRoom__label">Podaj lokalizacje pokoju</label>
+            <input
+              class="addRoom__input"
+              type="text"
+              placeholder="Podaj lokalizacje"
+            />
+          </div>
+          <div class="addRoom__field">
+            <label class="addRoom__label">Dodaj zdjęcie pokoju</label>
+            <input class="addRoom__input addRoom__input--file" type="file" />
+          </div>
+        </form>
+      </div>
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; Prawa zastrzeżone przez Andrzej Łuszcz</p>

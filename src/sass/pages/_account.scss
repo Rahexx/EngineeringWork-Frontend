@@ -282,3 +282,52 @@
     }
   }
 }
+
+.addRoom {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  padding: 5vw;
+  height: 100vh;
+  width: 100vw;
+  background-color: $prussian-blue;
+  z-index: 4;
+  &__exit {
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    font-size: 26px;
+    color: $powder-blue;
+  }
+  &__title {
+    margin: 10vh 0;
+    font-size: 22px;
+    text-align: center;
+    color: $carolina-blue;
+  }
+  &__form {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__field {
+    position: relative;
+    margin: 22px auto;
+    height: 40px;
+    width: 75%;
+  }
+  &__label {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    color: $carolina-blue;
+  }
+  &__input {
+    @include input();
+    &--file {
+      border: none;
+      padding-left: 0;
+    }
+  }
+}
