@@ -284,72 +284,21 @@
 }
 
 .addRoom {
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  padding: 5vw;
-  height: 100vh;
-  width: 100vw;
-  background-color: $prussian-blue;
-  z-index: 4;
-  overflow-y: scroll;
-  @include mq(large) {
-    left: -50vw;
-    padding: 2vw;
-    height: 85vh;
-    width: 50vw;
-    overflow: hidden;
-  }
-  @include mq(extra-large) {
-    left: -33vw;
-    width: 33vw;
-  }
+  @include popUpAccountList();
   &__exit {
-    position: absolute;
-    top: 5vw;
-    right: 5vw;
-    font-size: 26px;
-    color: $powder-blue;
-    @include mq(large) {
-      top: 2vw;
-      right: 2vw;
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    @include popUpAccountListExit();
   }
   &__title {
-    margin: 7vh 0;
-    font-size: 22px;
-    text-align: center;
-    color: $carolina-blue;
-    @include mq(small) {
-      margin: 5vh 0 10vh;
-    }
-    @include mq(large) {
-      margin: 3vh 0 7vh;
-    }
+    @include popUpAccountListTitle();
   }
   &__form {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @include mq(large) {
-      height: 30vh;
-    }
+    @include popUpAccountListForm();
   }
   &__field {
-    position: relative;
-    margin: 22px auto;
-    height: 40px;
-    width: 75%;
+    @include popUpAccountListField();
   }
   &__label {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    color: $carolina-blue;
+    @include popUpAccountListLabel();
   }
   &__input {
     @include input();
@@ -359,95 +308,31 @@
     }
   }
   &__submit {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    @include submit();
-    @include mq(small) {
-      height: 150%;
-      width: 75%;
-      transform: translateX(20%);
-    }
-    @include mq(large) {
-      height: 100%;
-    }
-    @include mq(large) {
-      transition: 0.5s;
-      &:hover {
-        background-color: $prussian-blue;
-        cursor: pointer;
-      }
+    @include popUpAccountListSubmit();
+    &:hover {
+      background-color: $powder-blue;
+      color: $prussian-blue;
+      cursor: pointer;
     }
   }
 }
 
 .addFault {
-  position: fixed;
-  top: 0;
-  left: -100vw;
-  padding: 5vw;
-  height: 100vh;
-  width: 100vw;
-  background-color: $prussian-blue;
-  z-index: 4;
-  overflow-y: scroll;
-  @include mq(large) {
-    left: -50vw;
-    padding: 2vw;
-    height: 85vh;
-    width: 50vw;
-    overflow: hidden;
-  }
-  @include mq(extra-large) {
-    left: -33vw;
-    width: 33vw;
-  }
+  @include popUpAccountList();
   &__exit {
-    position: absolute;
-    top: 5vw;
-    right: 5vw;
-    font-size: 26px;
-    color: $powder-blue;
-    @include mq(large) {
-      top: 2vw;
-      right: 2vw;
-      &:hover {
-        cursor: pointer;
-      }
-    }
+    @include popUpAccountListExit();
   }
   &__title {
-    margin: 7vh 0;
-    font-size: 22px;
-    text-align: center;
-    color: $carolina-blue;
-    @include mq(small) {
-      margin: 5vh 0 10vh;
-    }
-    @include mq(large) {
-      margin: 3vh 0 7vh;
-    }
+    @include popUpAccountListTitle();
   }
   &__form {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    @include mq(large) {
-      height: 30vh;
-    }
+    @include popUpAccountListForm();
   }
   &__field {
-    position: relative;
-    margin: 22px auto;
-    height: 40px;
-    width: 75%;
+    @include popUpAccountListField();
   }
   &__label {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    color: $carolina-blue;
+    @include popUpAccountListLabel();
   }
   &__input {
     @include input();
@@ -457,24 +342,11 @@
     }
   }
   &__submit {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    @include submit();
-    @include mq(small) {
-      height: 150%;
-      width: 75%;
-      transform: translateX(20%);
-    }
-    @include mq(large) {
-      height: 100%;
-    }
-    @include mq(large) {
-      transition: 0.5s;
-      &:hover {
-        background-color: $prussian-blue;
-        cursor: pointer;
-      }
+    @include popUpAccountListSubmit();
+    &:hover {
+      background-color: $powder-blue;
+      color: $prussian-blue;
+      cursor: pointer;
     }
   }
 }
