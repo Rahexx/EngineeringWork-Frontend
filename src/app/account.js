@@ -8,8 +8,10 @@ const changeStatusFaultBtn = document.querySelectorAll('.listFaults__change');
 const deleteLandLordBtn = document.querySelectorAll('.listRooms__btn--delete');
 const addRoomBtn = document.querySelector('.listInfo__add--room');
 const addFaultBtn = document.querySelector('.listInfo__add--fault');
+const addAgreementBtn = document.querySelector('.listInfo__add--agreement');
 const addRoomExit = document.querySelector('.addRoom__exit');
 const addFaultExit = document.querySelector('.addFault__exit');
+const addAgreementExit = document.querySelector('.addAgreement__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
@@ -134,10 +136,18 @@ addFaultBtn.addEventListener('click', () => {
   openAddRoom('.addFault');
 });
 
+addAgreementBtn.addEventListener('click', () => {
+  openAddRoom('.addAgreement');
+});
+
 addRoomExit.addEventListener('click', () => {
   closeAddForm('.addRoom');
 });
 
 addFaultExit.addEventListener('click', () => {
   closeAddForm('.addFault');
+});
+
+addAgreementExit.addEventListener('click', () => {
+  closeAddForm('.addAgreement');
 });

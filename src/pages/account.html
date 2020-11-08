@@ -122,8 +122,8 @@
       <div class="listInfo">
         <h3 class="listInfo__title">Lista usterek</h3>
         <i class="fas fa-caret-up listInfo__switch" data-switch="false"></i>
-        <p class="listInfo__add">
-          <i class="fas fa-plus-circle listInfo__add--fault"></i>
+        <p class="listInfo__add listInfo__add--fault">
+          <i class="fas fa-plus-circle"></i>
         </p>
         <ul class="listFaults">
           <li class="listFaults__item">
@@ -161,7 +161,9 @@
       <div class="listInfo">
         <h3 class="listInfo__title">Lista umów</h3>
         <i class="fas fa-caret-up listInfo__switch" data-switch="false"></i>
-        <p class="listInfo__add"><i class="fas fa-plus-circle"></i></p>
+        <p class="listInfo__add listInfo__add--agreement">
+          <i class="fas fa-plus-circle"></i>
+        </p>
         <ul class="listAgreements">
           <li class="listAgreements__item">
             <p class="listAgreements__id">1</p>
@@ -292,6 +294,40 @@
           </div>
           <div class="addFault__field">
             <input class="addFault__submit" type="submit" value="Wyślij" />
+          </div>
+        </form>
+      </div>
+      <div class="addAgreement">
+        <i class="fas fa-times addAgreement__exit"></i>
+        <h2 class="addAgreement__title">Dodaj nową umowę</h2>
+        <form class="addAgreement__form">
+          <div class="addAgreement__field">
+            <label class="addAgreement__label">Nazwa umowy</label>
+            <input
+              class="addAgreement__input"
+              type="text"
+              placeholder="Podaj nazwę umowy"
+            />
+          </div>
+          <div class="addAgreement__field">
+            <label class="addAgreement__label">
+              podaj za jaki termin w formacie miesiąc/rok
+            </label>
+            <input
+              class="addAgreement__input addFault__input--description"
+              type="text"
+              placeholder="Podaj termin"
+            />
+          </div>
+          <div class="addAgreement__field">
+            <label class="addAgreement__label">Dodaj umowę</label>
+            <input
+              class="addAgreement__input addAgreement__input--file"
+              type="file"
+            />
+          </div>
+          <div class="addAgreement__field">
+            <input class="addAgreement__submit" type="submit" value="Wyślij" />
           </div>
         </form>
       </div>
