@@ -79,14 +79,6 @@ const changeStatusFault = (e) => {
   }
 };
 
-const deleteLandLord = (e) => {
-  const previousBrother = e.target.previousElementSibling;
-  previousBrother.textContent = 'Nie ma nikogo przypisanego do pokoju';
-  previousBrother.classList.add('listRooms__login--empty');
-  e.target.classList.remove('listRooms__btn--delete');
-  e.target.classList.add('listRooms__btn--add');
-};
-
 const openAddRoom = (item, multiplyHeight = 0.03) => {
   const pageWidth = document.body.offsetWidth;
   const pageHeight = document.body.offsetHeight;
@@ -103,6 +95,21 @@ const openAddRoom = (item, multiplyHeight = 0.03) => {
 };
 
 const closeAddForm = (item) => gsap.to(item, { x: 0, duration: 1 });
+
+const deleteLandLord = (e) => {
+  const previousBrother = e.target.previousElementSibling;
+
+  previousBrother.textContent = 'Nie ma nikogo przypisanego do pokoju';
+  e.target.textContent = 'Dodaj do pokoju';
+
+  previousBrother.classList.add('listRooms__login--empty');
+  e.target.classList.remove('listRooms__btn--delete');
+  e.target.classList.add('listRooms__btn--add');
+
+  e.target.addEventListener('click', () => {
+    openAddRoom('.addUserRoom', 0.015);
+  });
+};
 
 [...switcher].map((item) => {
   item.addEventListener('click', (e) => {
