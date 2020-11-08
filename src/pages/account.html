@@ -122,7 +122,9 @@
       <div class="listInfo">
         <h3 class="listInfo__title">Lista usterek</h3>
         <i class="fas fa-caret-up listInfo__switch" data-switch="false"></i>
-        <p class="listInfo__add"><i class="fas fa-plus-circle"></i></p>
+        <p class="listInfo__add">
+          <i class="fas fa-plus-circle listInfo__add--fault"></i>
+        </p>
         <ul class="listFaults">
           <li class="listFaults__item">
             <p class="listFaults__id">1</p>
@@ -261,6 +263,35 @@
           <div class="addRoom__field">
             <label class="addRoom__label">Dodaj zdjęcie pokoju</label>
             <input class="addRoom__input addRoom__input--file" type="file" />
+          </div>
+          <div class="addRoom__field">
+            <input class="addRoom__submit" type="submit" value="Wyślij" />
+          </div>
+        </form>
+      </div>
+      <div class="addFault">
+        <i class="fas fa-times addFault__exit"></i>
+        <h2 class="addFault__title">Dodaj nową usterkę</h2>
+        <form class="addFault__form">
+          <div class="addFault__field">
+            <label class="addFault__label">Opis usterki</label>
+            <input
+              class="addFault__input"
+              type="text"
+              placeholder="Podaj opis usterki"
+            />
+          </div>
+          <div class="addFault__field">
+            <label class="addFault__label">Status</label>
+            <input
+              class="addFault__input addFault__input--description"
+              type="text"
+              value="W trakcie"
+              disabled
+            />
+          </div>
+          <div class="addFault__field">
+            <input class="addFault__submit" type="submit" value="Wyślij" />
           </div>
         </form>
       </div>

@@ -7,7 +7,9 @@ const deleteSettlementBtn = document.querySelectorAll(
 const changeStatusFaultBtn = document.querySelectorAll('.listFaults__change');
 const deleteLandLordBtn = document.querySelectorAll('.listRooms__btn--delete');
 const addRoomBtn = document.querySelector('.listInfo__add--room');
+const addFaultBtn = document.querySelector('.listInfo__add--fault');
 const addRoomExit = document.querySelector('.addRoom__exit');
+const addFaultExit = document.querySelector('.addFault__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
@@ -79,21 +81,22 @@ const deleteLandLord = (e) => {
   e.target.classList.add('listRooms__btn--add');
 };
 
-const openAddRoom = () => {
+const openAddRoom = (item) => {
   const pageWidth = document.body.offsetWidth;
+  const pageHeight = document.body.offsetHeight;
 
   if (pageWidth < 1024) {
-    gsap.to('.addRoom', { x: pageWidth, duration: 1 });
+    gsap.to(item, { x: pageWidth, duration: 1 });
   } else if (pageWidth < 1200) {
-    gsap.to('.addRoom', { y: '15%', duration: 0.1 });
-    gsap.to('.addRoom', { x: pageWidth * 1.25, duration: 1 });
+    gsap.to(item, { y: pageHeight * 0.03, duration: 0.1 });
+    gsap.to(item, { x: pageWidth * 0.75, duration: 1, delay: 0.1 });
   } else {
-    gsap.to('.addRoom', { y: '15%', duration: 0.1 });
-    gsap.to('.addRoom', { x: pageWidth * 1.33, duration: 1 });
+    gsap.to(item, { y: pageHeight * 0.03, duration: 0.1 });
+    gsap.to(item, { x: pageWidth * 0.66, duration: 1, delay: 0.1 });
   }
 };
 
-const closeAddRoom = () => gsap.to('.addRoom', { x: 0, duration: 1 });
+const closeAddForm = (item) => gsap.to(item, { x: 0, duration: 1 });
 
 [...switcher].map((item) => {
   item.addEventListener('click', (e) => {
@@ -123,6 +126,18 @@ const closeAddRoom = () => gsap.to('.addRoom', { x: 0, duration: 1 });
   });
 });
 
-addRoomBtn.addEventListener('click', openAddRoom);
+addRoomBtn.addEventListener('click', () => {
+  openAddRoom('.addRoom');
+});
 
-addRoomExit.addEventListener('click', closeAddRoom);
+addFaultBtn.addEventListener('click', () => {
+  openAddRoom('.addFault');
+});
+
+addRoomExit.addEventListener('click', () => {
+  closeAddForm('.addRoom');
+});
+
+addFaultExit.addEventListener('click', () => {
+  closeAddForm('.addFault');
+});
