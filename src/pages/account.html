@@ -191,7 +191,9 @@
       <div class="listInfo">
         <h3 class="listInfo__title">Lista rozliczeń</h3>
         <i class="fas fa-caret-up listInfo__switch" data-switch="false"></i>
-        <p class="listInfo__add"><i class="fas fa-plus-circle"></i></p>
+        <p class="listInfo__add listInfo__add--settlement">
+          <i class="fas fa-plus-circle"></i>
+        </p>
         <ul class="listSettlements">
           <li class="listSettlements__item">
             <p class="listSettlements__id">1</p>
@@ -328,6 +330,44 @@
           </div>
           <div class="addAgreement__field">
             <input class="addAgreement__submit" type="submit" value="Wyślij" />
+          </div>
+        </form>
+      </div>
+      <div class="addSettlement">
+        <i class="fas fa-times addSettlement__exit"></i>
+        <h2 class="addSettlement__title">Dodaj nową umowę</h2>
+        <form class="addSettlement__form">
+          <div class="addSettlement__field">
+            <label class="addSettlement__label">Kwota rozliczenia</label>
+            <input
+              class="addSettlement__input"
+              type="text"
+              placeholder="Podaj kwotę rozliczenia"
+            />
+          </div>
+          <div class="addSettlement__field">
+            <label class="addSettlement__label"> Podaj termin płatności </label>
+            <input class="addSettlement__input" type="date" />
+          </div>
+          <div class="addSettlement__field">
+            <label class="addSettlement__label">Status</label>
+            <input
+              class="addSettlement__input"
+              type="text"
+              value="Nie opłacone"
+              disabled
+            />
+          </div>
+          <div class="addSettlement__field">
+            <label class="addSettlement__label">Podaj login użytkownika</label>
+            <input
+              class="addSettlement__input"
+              type="text"
+              placeholder="Podaj login"
+            />
+          </div>
+          <div class="addSettlement__field">
+            <input class="addSettlement__submit" type="submit" value="Wyślij" />
           </div>
         </form>
       </div>
