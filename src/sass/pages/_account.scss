@@ -414,3 +414,33 @@
     }
   }
 }
+
+.addUserRoom {
+  @include popUpAccountList();
+  &__exit {
+    @include popUpAccountListExit();
+  }
+  &__title {
+    @include popUpAccountListTitle();
+  }
+  &__form {
+    @include popUpAccountListForm();
+  }
+  &__field {
+    @include popUpAccountListField();
+  }
+  &__label {
+    @include popUpAccountListLabel();
+  }
+  &__input {
+    @include input();
+  }
+  &__submit {
+    @include popUpAccountListSubmit();
+    &:hover {
+      background-color: $powder-blue;
+      color: $prussian-blue;
+      cursor: pointer;
+    }
+  }
+}

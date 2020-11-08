@@ -10,10 +10,12 @@ const addRoomBtn = document.querySelector('.listInfo__add--room');
 const addFaultBtn = document.querySelector('.listInfo__add--fault');
 const addAgreementBtn = document.querySelector('.listInfo__add--agreement');
 const addSettlementBtn = document.querySelector('.listInfo__add--settlement');
+const addUserRoomBtn = document.querySelector('.listRooms__btn--add');
 const addRoomExit = document.querySelector('.addRoom__exit');
 const addFaultExit = document.querySelector('.addFault__exit');
 const addAgreementExit = document.querySelector('.addAgreement__exit');
 const addSettlementExit = document.querySelector('.addSettlement__exit');
+const addUserRoomExit = document.querySelector('.addUserRoom__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 
 const openList = (e) => {
@@ -85,17 +87,17 @@ const deleteLandLord = (e) => {
   e.target.classList.add('listRooms__btn--add');
 };
 
-const openAddRoom = (item) => {
+const openAddRoom = (item, multiplyHeight = 0.03) => {
   const pageWidth = document.body.offsetWidth;
   const pageHeight = document.body.offsetHeight;
 
   if (pageWidth < 1024) {
     gsap.to(item, { x: pageWidth, duration: 1 });
   } else if (pageWidth < 1200) {
-    gsap.to(item, { y: pageHeight * 0.03, duration: 0.1 });
+    gsap.to(item, { y: pageHeight * multiplyHeight, duration: 0.1 });
     gsap.to(item, { x: pageWidth * 0.75, duration: 1, delay: 0.1 });
   } else {
-    gsap.to(item, { y: pageHeight * 0.03, duration: 0.1 });
+    gsap.to(item, { y: pageHeight * multiplyHeight, duration: 0.1 });
     gsap.to(item, { x: pageWidth * 0.66, duration: 1, delay: 0.1 });
   }
 };
@@ -146,6 +148,10 @@ addSettlementBtn.addEventListener('click', () => {
   openAddRoom('.addSettlement');
 });
 
+addUserRoomBtn.addEventListener('click', () => {
+  openAddRoom('.addUserRoom', 0.015);
+});
+
 addRoomExit.addEventListener('click', () => {
   closeAddForm('.addRoom');
 });
@@ -160,4 +166,8 @@ addAgreementExit.addEventListener('click', () => {
 
 addSettlementExit.addEventListener('click', () => {
   closeAddForm('.addSettlement');
+});
+
+addUserRoomExit.addEventListener('click', () => {
+  closeAddForm('.addUserRoom');
 });
