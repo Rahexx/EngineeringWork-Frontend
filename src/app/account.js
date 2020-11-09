@@ -10,7 +10,7 @@ const addRoomBtn = document.querySelector('.listInfo__add--room');
 const addFaultBtn = document.querySelector('.listInfo__add--fault');
 const addAgreementBtn = document.querySelector('.listInfo__add--agreement');
 const addSettlementBtn = document.querySelector('.listInfo__add--settlement');
-const addUserRoomBtn = document.querySelector('.listRooms__btn--add');
+const addUserRoomBtn = document.querySelectorAll('.listRooms__btn--add');
 const addRoomExit = document.querySelector('.addRoom__exit');
 const addFaultExit = document.querySelector('.addFault__exit');
 const addAgreementExit = document.querySelector('.addAgreement__exit');
@@ -21,7 +21,8 @@ const faultStatus = ['Naprawione', 'W trakcie'];
 const openList = (e) => {
   const parent = e.target.parentElement;
   const child = parent.lastChild.children[0];
-  const listLength = parent.lastChild.children.length;
+  const listLength =
+    parent.lastChild.children.length > 3 ? 3 : parent.lastChild.children.length;
   const heightItem = child.offsetHeight;
   const marginItem = window.getComputedStyle(child).marginTop;
   const marginItemValue = marginItem.slice(0, marginItem.length - 2);
@@ -38,14 +39,22 @@ const openList = (e) => {
   e.target.dataset.switch = 'true';
 };
 
-const closeList = (e) => {
-  const parent = e.target.parentElement;
+const closeList = (item, isRotate = true) => {
+  item.dataset.switch = 'false';
+  const parent = item.parentElement;
   const tl = gsap.timeline();
-  tl.to(parent, {
-    height: '8vh',
-    duration: 1,
-  }).to(e.target, { rotate: 360, duration: 0.3 });
-  e.target.dataset.switch = 'false';
+
+  if (isRotate) {
+    tl.to(parent, {
+      height: '8vh',
+      duration: 1,
+    }).to(item, { rotate: 360, duration: 0.3 });
+  } else {
+    gsap.to(parent, {
+      height: '8vh',
+      duration: 1,
+    });
+  }
 };
 
 const deleteSettlement = (e) => {
@@ -63,7 +72,11 @@ const deleteSettlement = (e) => {
     })
     .to(parent, { display: 'none' });
 
-  setInterval(() => {
+  setTimeout(() => {
+    closeList(parent.parentElement, false);
+  }, 1500);
+
+  setTimeout(() => {
     parent.remove();
   }, 1500);
 };
@@ -116,7 +129,7 @@ const deleteLandLord = (e) => {
     if (e.target.dataset.switch == 'false') {
       openList(e);
     } else {
-      closeList(e);
+      closeList(e.target);
     }
   });
 });
@@ -155,8 +168,10 @@ addSettlementBtn.addEventListener('click', () => {
   openAddRoom('.addSettlement');
 });
 
-addUserRoomBtn.addEventListener('click', () => {
-  openAddRoom('.addUserRoom', 0.015);
+[...addUserRoomBtn].map((item) => {
+  item.addEventListener('click', () => {
+    openAddRoom('.addUserRoom', 0.015);
+  });
 });
 
 addRoomExit.addEventListener('click', () => {
