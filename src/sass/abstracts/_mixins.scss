@@ -33,6 +33,8 @@ $breakpoints: (
   width: 80%;
   display: inline-block;
   object-fit: cover;
+  border-radius: 8px;
+
   @include mq(small) {
     margin: auto 10px;
     width: 50%;

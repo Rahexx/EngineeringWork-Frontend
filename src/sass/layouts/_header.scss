@@ -15,6 +15,12 @@
     @include mq(large) {
       font-size: 38px;
     }
+    @include mq(extra-large) {
+      top: 23vh;
+      left: 10vw;
+      font-size: 55px;
+      font-weight: 500;
+    }
   }
   &__description {
     position: absolute;
@@ -30,6 +36,10 @@
       top: 30vh;
       width: 40vw;
       font-size: 24px;
+    }
+    @include mq(extra-large) {
+      top: 35vh;
+      left: 10vw;
     }
   }
   &__icon {

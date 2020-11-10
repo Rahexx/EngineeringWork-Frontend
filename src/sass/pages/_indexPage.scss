@@ -93,6 +93,8 @@
     padding: 20px 0;
     height: 20vh;
     width: 90%;
+    display: flex;
+    align-items: center;
     text-align: center;
     @include mq(small) {
       padding: 0;
