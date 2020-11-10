@@ -125,8 +125,6 @@ const openList = (item) => {
     }
   }
 
-  console.log(paginationHeight);
-
   const tl = gsap.timeline();
   tl.to(parent, {
     height: `${

@@ -3,16 +3,16 @@ class Pagination {
     this.items = items;
     this.numberItems = items.length;
     this.maximumNumber = maximumNumber;
-    this.numberPages = this.numberItems / this.maximumNumber > 1
-      ? Math.floor(this.numberItems / this.maximumNumber) + 1
-      : this.numberItems / this.maximumNumber;
+    this.numberPages =
+      this.numberItems / this.maximumNumber > 1
+        ? Math.floor(this.numberItems / this.maximumNumber) + 1
+        : this.numberItems / this.maximumNumber;
     this.activePage = 1;
-
     // special for list rooms because in mobile portrait is block, but the rest volumes is flex
     this.isSmallBlock = isSmallBlock;
 
     if (this.maximumNumber === this.numberItems) {
-      this.numberPages -= 1;
+      this.numberPages = this.numberPages - 1;
     }
   }
 
@@ -28,6 +28,7 @@ class Pagination {
 
     for (let i = from; i < to; i++) {
       if (this.isSmallBlock && document.body.offsetWidth < 567) {
+        console.log(this.items[i]);
         this.items[i].style.display = 'block';
       } else {
         this.items[i].style.display = 'flex';
@@ -36,8 +37,11 @@ class Pagination {
     }
   }
 
-  deleteActiveClas() {
-    const list = [...document.querySelectorAll('.pagination__item')];
+  deleteActiveClas(parents) {
+    const classParents = parents.classList;
+    const list = [
+      ...document.querySelectorAll(`.${classParents.value} .pagination__item`),
+    ];
     for (let i = 0; i < list.length; i++) {
       if (list[i].classList.contains('pagination__item--active')) {
         list[i].classList.remove('pagination__item--active');
@@ -45,15 +49,18 @@ class Pagination {
     }
   }
 
-  addEvent() {
-    const list = [...document.querySelectorAll('.pagination__item')];
+  addEvent(parents) {
+    const classParents = parents.classList;
+    const list = [
+      ...document.querySelectorAll(`.${classParents.value} .pagination__item`),
+    ];
 
     for (let i = 0; i < list.length; i++) {
       list[i].addEventListener('click', (e) => {
         this.activePage = Number(e.target.textContent);
         this.hideElements();
         this.showElements();
-        this.deleteActiveClas();
+        this.deleteActiveClas(parents);
         e.target.classList.add('pagination__item--active');
       });
 
@@ -87,7 +94,7 @@ class Pagination {
     this.hideElements();
     this.showElements();
     parents.appendChild(ul);
-    this.addEvent();
+    this.addEvent(parents);
   }
 }
 
