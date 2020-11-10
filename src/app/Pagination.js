@@ -28,7 +28,6 @@ class Pagination {
 
     for (let i = from; i < to; i++) {
       if (this.isSmallBlock && document.body.offsetWidth < 567) {
-        console.log(this.items[i]);
         this.items[i].style.display = 'block';
       } else {
         this.items[i].style.display = 'flex';

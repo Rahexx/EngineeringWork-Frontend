@@ -59,7 +59,10 @@
 .userList {
   height: 50vh;
   width: 75%;
-  overflow: hidden;
+  overflow-y: scroll;
+  @include mq(large) {
+    overflow: hidden;
+  }
   &__title {
     margin: 5vh 0;
     font-size: 19px;
@@ -72,6 +75,8 @@
     text-align: center;
     line-height: 30px;
     color: $powder-blue;
+    display: flex;
+    justify-content: center;
     @include mq(large) {
       &:hover {
         color: $carolina-blue;
