@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import Pagination from './Pagination';
 
 const switcher = document.querySelectorAll('.listInfo__switch');
 const deleteSettlementBtn = document.querySelectorAll(
@@ -17,22 +18,63 @@ const addAgreementExit = document.querySelector('.addAgreement__exit');
 const addSettlementExit = document.querySelector('.addSettlement__exit');
 const addUserRoomExit = document.querySelector('.addUserRoom__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
+const listRoom = document.querySelector('.listRooms');
+const listRoomItem = document.querySelectorAll('.listRooms__item');
+const paginationRoom = new Pagination([...listRoomItem], false, 3);
+
+paginationRoom.createPagination(listRoom);
+
+const getChild = (children) => {
+  let child;
+
+  for (let i = 0; i < children.length; i++) {
+    if (children[i].offsetHeight > 0) {
+      child = children[i];
+      break;
+    }
+  }
+
+  return child;
+};
+
+const countChildren = (children) => {
+  let childrenNumber = 0;
+
+  for (let i = 0; i < children.length; i++) {
+    if (children[i].classList.contains('pagination')) {
+      break;
+    }
+
+    if (children[i].offsetHeight > 0) {
+      childrenNumber++;
+    }
+  }
+
+  return childrenNumber;
+};
 
 const openList = (e) => {
   const parent = e.target.parentElement;
-  const child = parent.lastChild.children[0];
-  const listLength =
-    parent.lastChild.children.length > 3 ? 3 : parent.lastChild.children.length;
+  const { children } = parent.lastChild;
+  const child = getChild(children);
+  const listLength = countChildren(children);
+  const lastChild = children[children.length - 1];
   const heightItem = child.offsetHeight;
   const marginItem = window.getComputedStyle(child).marginTop;
   const marginItemValue = marginItem.slice(0, marginItem.length - 2);
+  let paginationHeight = 0;
+
+  if (lastChild.classList.contains('pagination')) {
+    paginationHeight = lastChild.offsetHeight;
+  }
 
   const tl = gsap.timeline();
   tl.to(parent, {
     height: `${
       parent.offsetHeight +
       listLength * heightItem +
-      listLength * (marginItemValue * 1.5)
+      listLength * (marginItemValue * 1.5) +
+      paginationHeight
     }px`,
     duration: 1,
   }).to(e.target, { rotate: 180, duration: 0.3 });
