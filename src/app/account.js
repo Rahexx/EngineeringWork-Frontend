@@ -20,13 +20,25 @@ const addUserRoomExit = document.querySelector('.addUserRoom__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 const listRoom = document.querySelector('.listRooms');
 const listFaults = document.querySelector('.listFaults');
+const listAgreements = document.querySelector('.listAgreements');
+const listSettlements = document.querySelector('.listSettlements');
 const listRoomItem = document.querySelectorAll('.listRooms__item');
 const listFaultsItem = document.querySelectorAll('.listFaults__item');
+const listAgreementsItem = document.querySelectorAll('.listAgreements__item');
+const listSettlementsItem = document.querySelectorAll('.listSettlements__item');
 const paginationRoom = new Pagination([...listRoomItem], false, 3);
 const paginationFaults = new Pagination([...listFaultsItem], false, 3);
+const paginationAgreements = new Pagination([...listAgreementsItem], false, 3);
+const paginationSettlements = new Pagination(
+  [...listSettlementsItem],
+  false,
+  3,
+);
 
 paginationRoom.createPagination(listRoom);
 paginationFaults.createPagination(listFaults);
+paginationAgreements.createPagination(listAgreements);
+paginationSettlements.createPagination(listSettlements);
 
 const getChild = (children) => {
   let child;
