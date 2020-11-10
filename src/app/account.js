@@ -19,10 +19,14 @@ const addSettlementExit = document.querySelector('.addSettlement__exit');
 const addUserRoomExit = document.querySelector('.addUserRoom__exit');
 const faultStatus = ['Naprawione', 'W trakcie'];
 const listRoom = document.querySelector('.listRooms');
+const listFaults = document.querySelector('.listFaults');
 const listRoomItem = document.querySelectorAll('.listRooms__item');
+const listFaultsItem = document.querySelectorAll('.listFaults__item');
 const paginationRoom = new Pagination([...listRoomItem], false, 3);
+const paginationFaults = new Pagination([...listFaultsItem], false, 3);
 
 paginationRoom.createPagination(listRoom);
+paginationFaults.createPagination(listFaults);
 
 const getChild = (children) => {
   let child;
@@ -53,34 +57,6 @@ const countChildren = (children) => {
   return childrenNumber;
 };
 
-const openList = (e) => {
-  const parent = e.target.parentElement;
-  const { children } = parent.lastChild;
-  const child = getChild(children);
-  const listLength = countChildren(children);
-  const lastChild = children[children.length - 1];
-  const heightItem = child.offsetHeight;
-  const marginItem = window.getComputedStyle(child).marginTop;
-  const marginItemValue = marginItem.slice(0, marginItem.length - 2);
-  let paginationHeight = 0;
-
-  if (lastChild.classList.contains('pagination')) {
-    paginationHeight = lastChild.offsetHeight;
-  }
-
-  const tl = gsap.timeline();
-  tl.to(parent, {
-    height: `${
-      parent.offsetHeight +
-      listLength * heightItem +
-      listLength * (marginItemValue * 1.5) +
-      paginationHeight
-    }px`,
-    duration: 1,
-  }).to(e.target, { rotate: 180, duration: 0.3 });
-  e.target.dataset.switch = 'true';
-};
-
 const closeList = (item, isRotate = true) => {
   item.dataset.switch = 'false';
   const parent = item.parentElement;
@@ -97,6 +73,59 @@ const closeList = (item, isRotate = true) => {
       duration: 1,
     });
   }
+};
+
+const changePage = (item) => {
+  const parent = item.parentElement;
+  const grandParent = parent.parentElement;
+  const secondPreviousBrother =
+    grandParent.previousElementSibling.previousElementSibling;
+
+  closeList(secondPreviousBrother);
+
+  setTimeout(() => {
+    openList(secondPreviousBrother);
+  }, 1100);
+};
+
+const openList = (item) => {
+  const parent = item.parentElement;
+  const { children } = parent.lastChild;
+  const child = getChild(children);
+  const listLength = countChildren(children);
+  const lastChild = children[children.length - 1];
+  const heightItem = child.offsetHeight;
+  const marginItem = window.getComputedStyle(child).marginTop;
+  const marginItemValue = marginItem.slice(0, marginItem.length - 2);
+  let paginationHeight = 0;
+
+  if (lastChild.classList.contains('pagination')) {
+    paginationHeight = lastChild.offsetHeight * 2;
+
+    // add to pagination event to close nad open list
+
+    if (paginationHeight > 0) {
+      [...lastChild.children].map((paginationItem) => {
+        paginationItem.addEventListener('click', () => {
+          changePage(paginationItem);
+        });
+      });
+    }
+  }
+
+  console.log(paginationHeight);
+
+  const tl = gsap.timeline();
+  tl.to(parent, {
+    height: `${
+      parent.offsetHeight +
+      listLength * heightItem +
+      listLength * (marginItemValue * 1.5) +
+      paginationHeight
+    }px`,
+    duration: 1,
+  }).to(item, { rotate: 180, duration: 0.3 });
+  item.dataset.switch = 'true';
 };
 
 const deleteSettlement = (e) => {
@@ -169,7 +198,7 @@ const deleteLandLord = (e) => {
 [...switcher].map((item) => {
   item.addEventListener('click', (e) => {
     if (e.target.dataset.switch == 'false') {
-      openList(e);
+      openList(e.target);
     } else {
       closeList(e.target);
     }

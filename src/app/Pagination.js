@@ -3,16 +3,16 @@ class Pagination {
     this.items = items;
     this.numberItems = items.length;
     this.maximumNumber = maximumNumber;
-    this.numberPages =
-      this.numberItems / this.maximumNumber > 1
-        ? Math.floor(this.numberItems / this.maximumNumber) + 1
-        : this.numberItems / this.maximumNumber;
+    this.numberPages = this.numberItems / this.maximumNumber > 1
+      ? Math.floor(this.numberItems / this.maximumNumber) + 1
+      : this.numberItems / this.maximumNumber;
     this.activePage = 1;
+
     // special for list rooms because in mobile portrait is block, but the rest volumes is flex
     this.isSmallBlock = isSmallBlock;
 
     if (this.maximumNumber === this.numberItems) {
-      this.numberPages = this.numberPages - 1;
+      this.numberPages -= 1;
     }
   }
 
