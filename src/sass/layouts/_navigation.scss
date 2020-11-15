@@ -17,8 +17,8 @@
     background-color: transparent;
   }
   @include mq(extra-large) {
-    left: 30vw;
-    width: 65vw;
+    left: 0;
+    width: 100vw;
   }
   &--fixed {
     @include mq(large) {
