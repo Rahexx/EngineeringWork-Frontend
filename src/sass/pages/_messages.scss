@@ -16,7 +16,7 @@
     left: 5vw;
     font-size: 14px;
     text-decoration: none;
-    color: $prussian-blue;
+    color: $allice-blue;
     z-index: 3;
     @include mq(small) {
       left: 3vw;
@@ -134,8 +134,14 @@
   }
   &__text {
     margin: 10px 0 0;
-    min-width: 5vw;
+    text-align: end;
+    &--other {
+      text-align: start;
+    }
+  }
+  &__textContainer {
     padding: 15px;
+    display: inline-block;
     background-color: $background-collor;
     border-radius: 10px;
   }
@@ -170,6 +176,9 @@
     @include mq(large) {
       justify-content: center;
       width: 50vw;
+    }
+    @include mq(extra-large) {
+      width: 75vw;
     }
   }
   &__input {
