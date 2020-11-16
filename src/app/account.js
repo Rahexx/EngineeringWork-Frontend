@@ -173,17 +173,17 @@ const changeStatusFault = (e) => {
   }
 };
 
-const openAddRoom = (item, multiplyHeight = 0.03) => {
+const openAddRoom = (item) => {
   const pageWidth = document.body.offsetWidth;
-  const pageHeight = document.body.offsetHeight;
+  const pageHeight = window.innerHeight;
 
   if (pageWidth < 1024) {
     gsap.to(item, { x: pageWidth, duration: 1 });
   } else if (pageWidth < 1200) {
-    gsap.to(item, { y: pageHeight * multiplyHeight, duration: 0.1 });
+    gsap.to(item, { y: (pageHeight / 100) * 7.5, duration: 0.1 });
     gsap.to(item, { x: pageWidth * 0.75, duration: 1, delay: 0.1 });
   } else {
-    gsap.to(item, { y: pageHeight * multiplyHeight, duration: 0.1 });
+    gsap.to(item, { y: (pageHeight / 100) * 7.5, duration: 0.1 });
     gsap.to(item, { x: pageWidth * 0.66, duration: 1, delay: 0.1 });
   }
 };
@@ -201,7 +201,7 @@ const deleteLandLord = (e) => {
   e.target.classList.add('listRooms__btn--add');
 
   e.target.addEventListener('click', () => {
-    openAddRoom('.addUserRoom', 0.015);
+    openAddRoom('.addUserRoom');
   });
 };
 
