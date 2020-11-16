@@ -135,6 +135,7 @@
 .logHolder__input:focus ~ .logHolder__label,
 .logHolder__input:valid ~ .logHolder__label {
   top: -5px;
+  font-size: 16px;
   color: $carolina-blue;
 }
 
